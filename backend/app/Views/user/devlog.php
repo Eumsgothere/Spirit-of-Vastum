@@ -53,6 +53,22 @@
                 </p>
             </div>
         </div>
+
+
+                <!-- New Devlog Entry -->
+        <div class="shadow-sm mt-4 card" style="border: 3px solid teal; background-color: #fdf5e6;">
+            <div class="card-body">
+                <h3 style="color: teal; font-weight: 700; font-size: 2rem;">Devlog #0.10.7</h3>
+                <p style="font-size: 1.4rem; color: #555;"><strong>Date:</strong> May 7, 2026</p>
+                <h4 style="font-weight: 700; font-size: 1.6rem;">Character Design and Gameplay</h4>
+                <p style="font-size: 1.3rem; line-height: 1.9; color: #333;">
+                    The main character, Bill, has been fully modeled with improved details and high-quality textures to enhance the game’s visual quality and immersion. Updates were also made to the character’s overall appearance and animations for a smoother gameplay experience.
+                </p>
+                <p style="font-size: 1.3rem; line-height: 1.9; color: #333;">
+                    This update also introduces the core gameplay mechanics of Spirit of Vastum, including player movement, interaction systems, exploration features, and other foundational gameplay elements that help shape the overall player experience.
+                </p>
+            </div>
+        </div>
     </div>
 
     <?= view('components/footer'); ?>

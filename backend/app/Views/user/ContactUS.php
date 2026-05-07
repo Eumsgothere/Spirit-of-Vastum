@@ -1,4 +1,4 @@
-    <?= view('components/header'); ?>
+<?= view('components/header'); ?>
 
 <style>
     html, body {
@@ -123,20 +123,65 @@
 
 <div class="contact-wrapper">
 
-            <!-- Contact Info -->
-            <div class="mt-4">
-                <h3 style="color: teal; font-weight: 700; font-size: 2.2rem;">Contact</h3>
-                <p style="font-size: 1.5rem; color: #031926;">ThirdEyeFEU@gmail.com</p>
-            </div>
+    <!-- Dark Overlay -->
+    <div class="contact-overlay"></div>
 
-            <!-- Discord QR -->
-            <div class="mt-5">
-                <h3 style="color: white; font-weight: 700; font-size: 2.2rem;">Discord</h3>
-                <img src="Images/qrDC.png" alt="Discord QR Code"
-                    class="d-block mx-auto" style="max-width:200px; height:auto;">
-                <p style="margin-top: 10px; font-size: 1.4rem; color: #ffffff;">Scan to join our community</p>
-            </div>
+    <!-- Main Content -->
+    <div class="container contact-content">
+
+        <!-- Title -->
+        <h2 class="contact-title">
+            We Are Here to Help!
+        </h2>
+
+        <!-- Description -->
+        <p class="contact-description">
+            Have questions, feedback, or need assistance?
+            Our team is ready to support you.
+            Join our community on Discord or send us an email anytime.
+        </p>
+
+        <!-- Contact Card -->
+        <div class="contact-card">
+
+            <h3>Contact Information</h3>
+
+            <p>📧 ThirdEyeFEU@gmail.com</p>
+
+            <p>⏰ Support Available: Monday - Friday</p>
+
         </div>
-    </div>
 
-    <?= view('components/footer'); ?>
+        <!-- Discord Section -->
+        <div class="discord-section">
+
+            <h3>Join Our Discord Community</h3>
+
+            <img src="Images/qrDC.png" alt="Discord QR Code">
+
+            <p>
+                Scan the QR code to join our community,
+                receive updates, and connect with other players.
+            </p>
+
+        </div>
+
+        <!-- Buttons -->
+        <div class="contact-buttons">
+
+            <a href="mailto:ThirdEyeFEU@gmail.com"
+               class="contact-btn email-btn">
+                Email Us
+            </a>
+
+            <a href="#"
+               class="contact-btn discord-btn">
+                Join Discord
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+<?= view('components/footer'); ?>
