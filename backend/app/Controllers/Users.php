@@ -8,25 +8,25 @@ class Users extends BaseController
 {
     public function index()
     {
-        return view('user/landing');
+        return view('user/index');
     }
 
-    public function FAQ()
+    public function faq()
     {
-        return view('user/FAQ');
+        return view('user/faq');
     }
 
     public function devlog()
     {
-        return view('user/devlog'); // fixed typo
+        return view('user/devlog');
     }
 
-    public function ContactUS()
+    public function contactus()
     {
-        return view('user/ContactUS');
+        return view('user/contactus');
     }
 
-    public function About()
+    public function about()
     {
         return view('user/about');
     }

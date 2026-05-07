@@ -21,10 +21,11 @@
         <p style="font-size: 1.5rem; color: #333;">
             Explore the story, share ideas, and view epic game moments.
         </p>
-        <a href="devlog.php" class="btn btn-lg"
+        <a href="<?= base_url('devlog'); ?>" class="btn btn-lg"
             style="background-color: teal; color: #fdf5e6; border-radius: 25px; padding: 14px 28px; font-size: 1.3rem;">
             Visit Devlog
         </a>
+
     </div>
 
     <!-- About Section -->

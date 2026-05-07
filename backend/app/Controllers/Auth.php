@@ -55,7 +55,7 @@ class Auth extends BaseController
         ];
 
         $userModel->insert($data);
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 
     public function logout()

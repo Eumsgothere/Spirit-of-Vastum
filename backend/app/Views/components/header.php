@@ -67,6 +67,7 @@
                                     Logout (<?= esc($session->get('username')) ?>)
                                 </button>
                             </form>
+
                         </li>
                     <?php else: ?>
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
