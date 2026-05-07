@@ -1,0 +1,8 @@
+  <?= view('components/header'); ?>
+
+  <form action="/login" method="post">
+    <input name="email" type="email" placeholder="Email" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+  <?= view('components/footer'); ?>
