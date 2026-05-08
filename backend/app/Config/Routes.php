@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Users::index');
 $routes->get('faq', 'Users::faq');
-$routes->get('devlog', 'Users::devlog');
+
 $routes->get('contactus', 'Users::contactus');
 $routes->get('about', 'Users::about');
 
@@ -18,3 +18,9 @@ $routes->get('signup', 'Auth::showSignupForm');
 $routes->post('signup', 'Auth::signup');
 $routes->get('logout', 'Auth::logout');
 $routes->post('logout', 'Auth::logout');
+
+//devlog
+$routes->get('devlog', 'Devlog::index');
+$routes->get('devlog/create', 'Devlog::create');
+$routes->post('devlog/store', 'Devlog::store');
+$routes->post('devlog/delete/(:num)', 'Devlog::delete/$1');

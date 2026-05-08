@@ -10,12 +10,10 @@
     <style>
         body {
             background-color: #F4E9CD;
-            /* beige background */
             margin: 0;
             font-family: Arial, sans-serif;
         }
 
-        /* Navbar link styles */
         .navbar-nav .nav-link {
             color: #F4E9CD;
             padding: 6px 14px;
@@ -58,8 +56,7 @@
                     <?php $session = session(); ?>
                     <?php if ($session->get('username')): ?>
                         <?php if ($session->get('role') === 'admin'): ?>
-                            <li class="nav-item"><a class="nav-link" href="/admin/create-post" style="color: gold;">Create Post</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/admin/gallery-upload" style="color: gold;">Upload Image</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/devlog/create" style="color: gold;">Create Post</a></li>
                         <?php endif; ?>
                         <li class="nav-item">
                             <form action="/logout" method="post" style="display:inline;">
@@ -67,7 +64,6 @@
                                     Logout (<?= esc($session->get('username')) ?>)
                                 </button>
                             </form>
-
                         </li>
                     <?php else: ?>
                         <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
