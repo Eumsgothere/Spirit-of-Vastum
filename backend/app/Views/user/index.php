@@ -1,112 +1,327 @@
-    <?= view('components/header'); ?>
+<?= view('components/header'); ?>
 
-    <!-- Banner Section -->
-    <div class="p-0 container-fluid">
-        <div class="banner" style="position: relative;">
-            <img src="Images/spirit_of_vastum_Banner.png" alt="Spirit of Vastum Banner"
-                style="width:100%; height:auto; display:block;">
-            <!-- Overlay text -->
-            <div style="position: absolute; top: 50%; left: 50%; 
-                transform: translate(-50%, -50%); 
-                color: #fdf5e6; text-align: center;">
-                <h1 style="font-size: 4rem; font-weight: 800;">Spirit of Vastum</h1>
-                <p style="font-size: 1.5rem;">Protect the waters. Restore balance.</p>
-            </div>
+<style>
+    body .banner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        filter: brightness(55%);
+    }
+
+    .banner-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fdf5e6;
+        width: 90%;
+    }
+
+    .banner-overlay h1 {
+        font-size: 5rem;
+        font-weight: 800;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner-overlay p {
+        font-size: 1.6rem;
+        margin-top: 15px;
+    }
+
+    .custom-btn {
+        background: linear-gradient(135deg, teal, #00b3b3);
+        color: #fff;
+        border: none;
+        padding: 14px 35px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        transition: 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-btn:hover {
+        transform: translateY(-4px);
+        color: white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .section-title {
+        color: teal;
+        font-size: 2.8rem;
+        font-weight: 800;
+        margin-bottom: 25px;
+    }
+
+    .section-text {
+        font-size: 1.2rem;
+        line-height: 2;
+        color: #444;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 25px;
+        padding: 40px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .feature-box {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        height: 100%;
+    }
+
+    .feature-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .character-card {
+        background: white;
+        border-radius: 25px;
+        padding: 25px;
+        text-align: center;
+        height: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+    }
+
+    .character-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .character-card img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 15px;
+    }
+
+    .character-card h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: teal;
+    }
+
+    .character-card p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 768px) {
+
+        .banner img {
+            height: 70vh;
+        }
+
+        .banner-overlay h1 {
+            font-size: 3rem;
+        }
+
+        .banner-overlay p {
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+        }
+    }
+</style>
+
+<!-- Banner Section -->
+<div class="p-0 container-fluid">
+    <div class="banner">
+
+        <img src="Images/spirit_of_vastum_Banner.png"
+            alt="Spirit of Vastum Banner">
+
+        <div class="banner-overlay">
+            <h1>Spirit of Vastum</h1>
+
+            <p>
+                Protect the waters. Restore balance.
+            </p>
+
+            <a href="<?= base_url('devlog'); ?>" class="custom-btn">
+                Visit Devlog
+            </a>
         </div>
     </div>
+</div>
 
-    <!-- Hero Section -->
-    <div class="mt-5 text-center container">
-        <h2 style="color: teal; font-size: 2.5rem;">Welcome to Spirit of Vastum</h2>
-        <p style="font-size: 1.5rem; color: #333;">
-            Explore the story, share ideas, and view epic game moments.
-        </p>
-        <a href="<?= base_url('devlog'); ?>" class="btn btn-lg"
-            style="background-color: teal; color: #fdf5e6; border-radius: 25px; padding: 14px 28px; font-size: 1.3rem;">
-            Visit Devlog
-        </a>
+<main>
 
+    <!-- Welcome Section -->
+    <div class="py-5 container">
+        <div class="text-center glass-card">
+
+            <h2 class="section-title">
+                Welcome to Spirit of Vastum
+            </h2>
+
+            <p class="section-text">
+                Explore the story, discover unique characters, and experience a world where players fight against pollution to restore balance in the ocean.
+            </p>
+
+        </div>
     </div>
 
     <!-- About Section -->
-    <div class="mt-5 container">
-        <h2 class="text-center" style="color: teal; font-size: 2.5rem;">What is Spirit of Vastum?</h2>
-        <p style="font-size: 1.4rem; line-height: 1.8; color: #333;">
-            Spirit of Vastum is a video game, an environmental
-            action game that makes use of a character Bill,
-            who is a determined fish in a mission to restore
-            polluted waters. During the game, players gather
-            and recycle garbage as they explore more and
-            more difficult water worlds. Bill struggles against a
-            highly influential villain that throws huge piles of
-            garbage in the ocean as the pollution spreads.
-            Players can correct imbalance in the ecosystem
-            and acquire the value of good waste management
-            and preservation of marine life by cleaning the
-            waters and breaking the barriers.
-        </p>
-    </div>
+    <div class="pb-5 container">
+        <div class="glass-card">
 
-    <!-- Features -->
-    <div class="mt-5 text-center container">
-        <h2 style="color: teal; font-size: 2.5rem;">Game Features</h2>
-        <ul style="list-style-type: none; padding-left: 0; display: inline-block; text-align: left; font-size: 1.3rem;">
-            <li>🌊 Clean the polluted water: Collect and dispose of trash to restore balance.</li>
-            <li>🐟 Play as Bill the cleaner fish: Swim through dangerous waters and fight pollution.</li>
-            <li>🤝 Engage with other characters: Meet allies and foes who shape your mission.</li>
-            <li>♻️ Manage waste efficiently: Sort trash quickly before pollution spreads.</li>
-            <li>🌱 Protect marine ecosystem: Experience how cleaning restores life to the ocean.</li>
-        </ul>
-    </div>
+            <h2 class="text-center section-title">
+                What is Spirit of Vastum?
+            </h2>
 
-    <!-- Characters -->
-    <div class="mt-5 container">
-        <h2 style="color: teal; font-size: 2.5rem;">Featured Characters</h2>
-        <div class="row">
-            <!-- Bill -->
-            <div class="text-center col-md-3">
-                <img src="Images/Bill.png" alt="Bill the Cleaner Fish"
-                    style="width:100%; max-width:150px; height:auto; margin-bottom:10px;">
-                <h4 style="font-size: 1.6rem;">Bill</h4>
-                <p style="font-size: 1.2rem;">The main character is an average fishfolk, Bill. He lives with his family on the
-                    West Philippine Sea. This naive and adventurous fish is a new hardworking
-                    employee for the Seabound Alliance's River Corps. His work on the company
-                    is to collect waste and feed it to the corresponding machine, segregating
-                    different types of wastes.</p>
-            </div>
+            <p class="section-text">
+                Spirit of Vastum is an environmental action game featuring Bill, a determined fish on a mission to restore polluted waters. Players collect and recycle garbage while exploring increasingly dangerous underwater environments. Along the way, Bill faces powerful enemies responsible for spreading pollution across the ocean. Through action-packed gameplay, players learn the importance of proper waste management and protecting marine life.
+            </p>
 
-            <!-- Gill -->
-            <div class="text-center col-md-3">
-                <img src="Images/Gill.png" alt="Gill the Mentor"
-                    style="width:100%; max-width:150px; height:auto; margin-bottom:10px;">
-                <h4 style="font-size: 1.6rem;">Gill</h4>
-                <p style="font-size: 1.2rem;">Gill is a laidback and cool senior that will help Bill start
-                    his place in the Seabound Alliance's River Corps. He will
-                    teach and guide Bill throughout his works</p>
-            </div>
-
-            <!-- Corxalis -->
-            <div class="text-center col-md-3">
-                <img src="Images/Corxalis.png" alt="Corxalis the Spirit"
-                    style="width:100%; max-width:150px; height:auto; margin-bottom:10px;">
-                <h4 style="font-size: 1.6rem;">Corxalis</h4>
-                <p style="font-size: 1.2rem;">The Spirit of Vastum itself. Corxalis is the one who keeps
-                    the balance between the world, and an external force. It's
-                    a mysterious creature, rarely in sight of other fishfolks.</p>
-            </div>
-
-            <!-- The Boss -->
-            <div class="text-center col-md-3">
-                <img src="Images/TheBoss.png" alt="The Boss Villain"
-                    style="width:100%; max-width:150px; height:auto; margin-bottom:10px;">
-                <h4 style="font-size: 1.6rem;">The Boss</h4>
-                <p style="font-size: 1.2rem;">The "Boss" of the River Corps, who assigns Bill to Gill as
-                    the newbie of the team. Has a bossy personality, perfect
-                    for a leader. Nothing special about him, probably a bit too
-                    suspicious.</p>
-            </div>
         </div>
     </div>
 
+    <!-- Features -->
+    <div class="pb-5 container">
 
-    <?= view('components/footer'); ?>
+        <h2 class="text-center section-title">
+            Game Features
+        </h2>
+
+        <div class="g-4 row">
+
+            <div class="col-md-4">
+                <div class="text-center feature-box">
+                    <div class="feature-icon">🌊</div>
+
+                    <h4>Clean Polluted Waters</h4>
+
+                    <p>
+                        Collect and properly dispose of trash to restore balance in the ecosystem.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center feature-box">
+                    <div class="feature-icon">🐟</div>
+
+                    <h4>Play as Bill</h4>
+
+                    <p>
+                        Swim through dangerous waters while fighting pollution and protecting marine life.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center feature-box">
+                    <div class="feature-icon">♻️</div>
+
+                    <h4>Manage Waste</h4>
+
+                    <p>
+                        Sort and recycle waste efficiently before pollution spreads further.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Characters -->
+    <div class="pb-5 container">
+
+        <h2 class="text-center section-title">
+            Featured Characters
+        </h2>
+
+        <div class="g-4 row">
+
+            <!-- Bill -->
+            <div class="col-lg-3 col-md-6">
+                <div class="character-card">
+
+                    <img src="Images/Bill.png" alt="Bill">
+
+                    <h4>Bill</h4>
+
+                    <p>
+                        A hardworking fishfolk from the West Philippine Sea who joins the River Corps to help clean and protect the ocean.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Gill -->
+            <div class="col-lg-3 col-md-6">
+                <div class="character-card">
+
+                    <img src="Images/Gill.png" alt="Gill">
+
+                    <h4>Gill</h4>
+
+                    <p>
+                        A laidback senior member of the River Corps who guides Bill throughout his journey.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Corxalis -->
+            <div class="col-lg-3 col-md-6">
+                <div class="character-card">
+
+                    <img src="Images/Corxalis.png" alt="Corxalis">
+
+                    <h4>Corxalis</h4>
+
+                    <p>
+                        The mysterious Spirit of Vastum who maintains balance between nature and external forces.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- Boss -->
+            <div class="col-lg-3 col-md-6">
+                <div class="character-card">
+
+                    <img src="Images/TheBoss.png" alt="The Boss">
+
+                    <h4>The Boss</h4>
+
+                    <p>
+                        The strict leader of the River Corps who assigns Bill to Gill and watches over the team.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</main>
+
+<?= view('components/footer'); ?>
