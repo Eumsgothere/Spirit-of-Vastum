@@ -1,5 +1,15 @@
 <?= view('components/header'); ?>
 
+<?php
+
+$screenshots = [
+    'Images/game1.png',
+    'Images/game2.png',
+    'Images/game3.png'
+];
+
+?>
+
 <style>
     body {
         background-color: #F4E9CD;
@@ -91,6 +101,27 @@
         word-spacing: 0.05em;
     }
 
+    /* GAMEPLAY PREVIEW */
+    .gameplay-card {
+        background: white;
+        border-radius: 25px;
+        overflow: hidden;
+        border-top: 6px solid #468189;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+    }
+
+    .gameplay-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    .gameplay-card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+
     /* INFO SECTION */
     .info-section {
         background: #9DBEBB;
@@ -116,7 +147,6 @@
         font-size: 1.05rem;
     }
 
-
     .info-section .col-lg-6 {
         padding: 40px;
     }
@@ -130,8 +160,9 @@
         padding-left: 50px;
     }
 
-    /* Responsive adjustments */
+    /* Responsive */
     @media (max-width: 768px) {
+
         .about-title {
             font-size: 2.2rem;
         }
@@ -144,7 +175,6 @@
             padding: 70px 30px;
         }
 
-        /* On mobile, switch to horizontal divider */
         .info-section .col-lg-6:first-child {
             border-right: none;
             border-bottom: 6px solid #031926;
@@ -159,6 +189,7 @@
     <!-- HERO -->
     <div class="mb-5 about-hero">
         <h1 class="about-title">About The Game</h1>
+
         <p class="about-description">
             Spirit of Vastum is an underwater adventure game focused on environmental awareness.
             Players take control of Bill, a brave fish determined to stop pollution and restore
@@ -173,58 +204,117 @@
     </div>
 
     <div class="row g-4">
+
         <div class="col-lg-4 col-md-6">
             <div class="feature-card">
+
                 <div class="feature-icon">🌊</div>
-                <h4 class="feature-title">Clean Polluted Waters</h4>
+
+                <h4 class="feature-title">
+                    Clean Polluted Waters
+                </h4>
+
                 <p class="feature-text">
                     Collect and properly dispose of trash to restore balance in the ecosystem.
                 </p>
+
             </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
             <div class="feature-card">
+
                 <div class="feature-icon">🐟</div>
-                <h4 class="feature-title">Play as Bill</h4>
+
+                <h4 class="feature-title">
+                    Play as Bill
+                </h4>
+
                 <p class="feature-text">
                     Swim through dangerous waters while fighting pollution and protecting marine life.
                 </p>
+
             </div>
         </div>
 
         <div class="col-lg-4 col-md-6">
             <div class="feature-card">
+
                 <div class="feature-icon">♻️</div>
-                <h4 class="feature-title">Manage Waste</h4>
+
+                <h4 class="feature-title">
+                    Manage Waste
+                </h4>
+
                 <p class="feature-text">
                     Sort and recycle waste efficiently before pollution spreads further.
                 </p>
+
             </div>
         </div>
+
+    </div>
+
+    <!-- GAMEPLAY PREVIEW -->
+    <div class="mt-5 text-center">
+        <h2 class="section-title">Gameplay Preview</h2>
+    </div>
+
+    <div class="row g-4">
+
+        <?php foreach ($screenshots as $image): ?>
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="gameplay-card">
+
+                    <img
+                        src="<?= base_url($image) ?>"
+                        alt="Gameplay Screenshot">
+
+                </div>
+
+            </div>
+
+        <?php endforeach; ?>
+
     </div>
 
     <!-- MISSION SECTION -->
     <div class="info-section">
+
         <div class="align-items-center row">
+
             <div class="mb-4 mb-lg-0 col-lg-6">
-                <h2 class="info-title">Our Mission</h2>
+
+                <h2 class="info-title">
+                    Our Mission
+                </h2>
+
                 <p class="info-text">
                     The game was created to spread awareness about ocean pollution and inspire
                     players to care for the environment through interactive storytelling.
                     Every mission encourages positive action and responsible waste management.
                 </p>
+
             </div>
 
             <div class="col-lg-6">
-                <h2 class="info-title">Why It Matters</h2>
+
+                <h2 class="info-title">
+                    Why It Matters
+                </h2>
+
                 <p class="info-text">
                     Marine pollution affects countless sea creatures and ecosystems worldwide.
                     Spirit of Vastum transforms this real-world issue into a meaningful gaming
                     experience that promotes awareness while remaining fun and engaging.
                 </p>
+
             </div>
+
         </div>
+
     </div>
 
 </div>
