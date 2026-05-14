@@ -120,6 +120,11 @@
       </button>
 
     </form>
+    <p class="register-text">
+      <a href="<?= base_url('forgot-password'); ?>" style="color:#7fffd4; font-weight:600;">
+        Forgot your password?
+      </a>
+    </p>
 
     <p class="register-text">
       Don’t have an account?

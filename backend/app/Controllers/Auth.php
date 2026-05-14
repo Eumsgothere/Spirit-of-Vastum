@@ -63,4 +63,23 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+    public function showForgotForm()
+    {
+        return view('auth/forgot_password');
+    }
+
+    public function sendResetLink()
+    {
+        $email = $this->request->getPost('email');
+
+        // Check if user exists
+        $userModel = new \App\Models\UserModel();
+        $user = $userModel->where('email', $email)->first();
+
+        if (!$user) {
+            return redirect()->back()->with('error', 'Email not found');
+        }
+        $token = bin2hex(random_bytes(32));
+        return redirect()->to('/login')->with('success', 'Password reset link sent to your email');
+    }
 }

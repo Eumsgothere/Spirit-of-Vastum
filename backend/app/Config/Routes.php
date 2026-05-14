@@ -18,6 +18,8 @@ $routes->get('signup', 'Auth::showSignupForm');
 $routes->post('signup', 'Auth::signup');
 $routes->get('logout', 'Auth::logout');
 $routes->post('logout', 'Auth::logout');
+$routes->get('forgot-password', 'Auth::showForgotForm');
+$routes->post('forgot-password', 'Auth::sendResetLink');
 
 //devlog
 $routes->get('devlog', 'Devlog::index');
