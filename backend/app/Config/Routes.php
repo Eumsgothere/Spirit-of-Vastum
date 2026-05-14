@@ -18,8 +18,15 @@ $routes->get('signup', 'Auth::showSignupForm');
 $routes->post('signup', 'Auth::signup');
 $routes->get('logout', 'Auth::logout');
 $routes->post('logout', 'Auth::logout');
+// Forgot Password
 $routes->get('forgot-password', 'Auth::showForgotForm');
 $routes->post('forgot-password', 'Auth::sendResetLink');
+$routes->get('reset-password/(:segment)', 'Auth::showResetForm/$1');
+$routes->post('reset-password/(:segment)', 'Auth::resetPassword/$1');
+// Reset Password
+$routes->get('reset-password/(:segment)', 'Auth::showResetForm/$1');
+$routes->post('reset-password/(:segment)', 'Auth::resetPassword/$1');
+
 
 //devlog
 $routes->get('devlog', 'Devlog::index');
