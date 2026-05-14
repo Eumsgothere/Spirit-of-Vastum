@@ -78,62 +78,45 @@
     text-decoration: underline;
   }
 </style>
-
 <div class="register-section">
-
   <div class="register-card">
+    <h3 class="register-title">Register</h3>
 
-    <h3 class="register-title">
-      Register
-    </h3>
+    <?php if (session()->getFlashdata('error')): ?>
+      <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>
+    <?php endif; ?>
+    <?php if (session()->getFlashdata('success')): ?>
+      <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+    <?php endif; ?>
 
     <form action="<?= base_url('signup'); ?>" method="post">
-
       <div class="mb-3">
-        <input class="form-control"
-          name="first_name"
-          placeholder="First Name"
-          required>
+        <input class="form-control" name="first_name" placeholder="First Name" required>
       </div>
 
       <div class="mb-3">
-        <input class="form-control"
-          name="last_name"
-          placeholder="Last Name"
-          required>
+        <input class="form-control" name="last_name" placeholder="Last Name" required>
       </div>
 
       <div class="mb-3">
-        <input class="form-control"
-          name="email"
-          type="email"
-          placeholder="Email"
-          required>
+        <input class="form-control" name="email" type="email" placeholder="Email" required>
+      </div>
+
+      <div class="mb-3">
+        <input class="form-control" name="password" type="password" placeholder="Password" required>
       </div>
 
       <div class="mb-4">
-        <input class="form-control"
-          name="password"
-          type="password"
-          placeholder="Password"
-          required>
+        <input class="form-control" name="password_confirm" type="password" placeholder="Confirm Password" required>
       </div>
 
-      <button type="submit" class="register-btn">
-        Register
-      </button>
-
+      <button type="submit" class="register-btn">Register</button>
     </form>
 
     <p class="login-text">
       Already have an account?
-      <a href="<?= base_url('login'); ?>">
-        Login
-      </a>
+      <a href="<?= base_url('login'); ?>">Login</a>
     </p>
-
   </div>
-
 </div>
-
 <?= view('components/footer'); ?>
