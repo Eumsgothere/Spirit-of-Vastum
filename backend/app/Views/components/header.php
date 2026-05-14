@@ -226,7 +226,21 @@
                     <li class="nav-item">
                         <a class="nav-link <?= ($current == 'about' ? 'active' : '') ?>"
                             href="/about">
-                            About
+                            About Team
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'aboutgame' ? 'active' : '') ?>"
+                            href="/aboutgame">
+                            About Game
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
+                            href="/storygame">
+                            Story
                         </a>
                     </li>
 
