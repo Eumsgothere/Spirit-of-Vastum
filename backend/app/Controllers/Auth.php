@@ -95,7 +95,10 @@ class Auth extends BaseController
             'expires_at' => $expires,
         ]);
 
-
+        $resetLink = base_url("reset-password/$token");
+        // FOR DEV LANG TOH BEFORE TAYO MAG DEPLOY
+        echo "Reset link (dev only): <a href='$resetLink'>$resetLink</a>";
+        exit;
         $resetLink = base_url("reset-password/$token");
 
         $emailService = \Config\Services::email();
