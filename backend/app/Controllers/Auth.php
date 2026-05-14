@@ -41,21 +41,27 @@ class Auth extends BaseController
 
     public function signup()
     {
-        $request = service('request');
-        $userModel = new UsersModel();
+        $firstName = $this->request->getPost('first_name');
+        $lastName  = $this->request->getPost('last_name');
+        $email     = $this->request->getPost('email');
+        $password  = $this->request->getPost('password');
+        $confirm   = $this->request->getPost('password_confirm');
 
-        $data = [
-            'first_name' => $request->getPost('first_name'),
-            'last_name'  => $request->getPost('last_name'),
-            'email'      => $request->getPost('email'),
-            'password_hash' => password_hash($request->getPost('password'), PASSWORD_DEFAULT),
-            'type'       => 'client',
-            'account_status' => 1,
-            'email_activated' => 0,
-        ];
+        if ($password !== $confirm) {
+            return redirect()->back()->with('error', 'Passwords do not match');
+        }
 
-        $userModel->insert($data);
-        return redirect()->to('/');
+        $usersModel = new \App\Models\UsersModel();
+        $usersModel->insert([
+            'first_name'     => $firstName,
+            'last_name'      => $lastName,
+            'email'          => $email,
+            'password_hash'  => password_hash($password, PASSWORD_DEFAULT),
+            'account_status' => 'active',
+            'created_at'     => date('Y-m-d H:i:s'),
+        ]);
+
+        return redirect()->to('/login')->with('success', 'Account created successfully');
     }
 
     public function logout()
@@ -124,6 +130,12 @@ class Auth extends BaseController
         }
 
         $newPassword = $this->request->getPost('password');
+        $confirmPassword = $this->request->getPost('password_confirm');
+
+        if ($newPassword !== $confirmPassword) {
+            return redirect()->back()->with('error', 'Passwords do not match');
+        }
+
         $userModel = new \App\Models\UsersModel();
         $userModel->update($record['user_id'], [
             'password_hash' => password_hash($newPassword, PASSWORD_DEFAULT),
