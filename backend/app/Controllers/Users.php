@@ -30,4 +30,14 @@ class Users extends BaseController
     {
         return view('user/about');
     }
+
+    public function aboutgame()
+    {
+        return view('user/aboutgame');
+    }
+
+    public function storygame()
+    {
+        return view('user/storygame');
+    }
 }

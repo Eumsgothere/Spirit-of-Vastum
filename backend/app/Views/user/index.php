@@ -1,15 +1,65 @@
 <?= view('components/header'); ?>
 
+<?php
+
+$features = [
+    [
+        'icon' => '🌊',
+        'title' => 'Explore Oceans',
+        'description' => 'Travel through polluted underwater environments filled with secrets, dangers, and hidden paths.'
+    ],
+
+    [
+        'icon' => '♻️',
+        'title' => 'Clean the Sea',
+        'description' => 'Collect garbage and recycle waste materials to help restore balance to marine ecosystems.'
+    ],
+
+    [
+        'icon' => '⚔️',
+        'title' => 'Fight Pollution',
+        'description' => 'Face dangerous enemies responsible for spreading toxins across the ocean.'
+    ]
+];
+
+$screenshots = [
+    'Images/game1.png',
+    'Images/game2.png',
+    'Images/game3.png'
+];
+
+?>
+
 <style>
-    body .banner {
+    :root {
+        --primary: #008b8f;
+        --primary-dark: #006d70;
+        --secondary: #d9d3c3;
+        --card-bg: #f7f4ed;
+        --page-bg: #ece3cb;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--page-bg);
+        color: #444;
+    }
+
+    /* Banner */
+
+    .banner {
         position: relative;
         overflow: hidden;
     }
 
     .banner img {
         width: 100%;
-        height: 90vh;
+        height: 95vh;
         object-fit: cover;
+        filter: brightness(55%);
     }
 
     .banner-overlay {
@@ -18,120 +68,132 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        color: #fdf5e6;
+        color: #fff;
         width: 90%;
     }
 
     .banner-overlay h1 {
-        font-size: 5rem;
-        font-weight: 800;
+        font-size: clamp(3rem, 7vw, 6rem);
+        font-weight: 900;
+        letter-spacing: 3px;
         text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
     .banner-overlay p {
-        font-size: 1.6rem;
-        margin-top: 15px;
+        font-size: 1.4rem;
+        margin-top: 20px;
+        max-width: 700px;
+        margin-inline: auto;
+        line-height: 1.8;
     }
 
+    /* Buttons */
+
     .custom-btn {
-        background: linear-gradient(135deg, teal, #00b3b3);
-        color: #fff;
+        background: var(--primary);
+        color: white;
         border: none;
-        padding: 14px 35px;
+        padding: 15px 38px;
         border-radius: 50px;
-        font-size: 1.2rem;
-        font-weight: 600;
+        font-size: 1.05rem;
+        font-weight: 700;
         transition: 0.3s ease;
         text-decoration: none;
         display: inline-block;
-        margin-top: 20px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        margin-top: 25px;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
     }
 
     .custom-btn:hover {
-        transform: translateY(-4px);
+        background: var(--primary-dark);
+        transform: translateY(-5px);
         color: white;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
     }
 
+    /* Titles */
+
     .section-title {
-        color: teal;
+        color: var(--primary);
         font-size: 2.8rem;
-        font-weight: 800;
+        font-weight: 900;
         margin-bottom: 25px;
     }
 
     .section-text {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
         line-height: 2;
-        color: #444;
+        color: #555;
     }
+
+    /* Main Cards */
 
     .glass-card {
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(10px);
-        border-radius: 25px;
-        padding: 40px;
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        background: var(--card-bg);
+        border-radius: 30px;
+        padding: 45px;
+        border-top: 6px solid var(--primary);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     }
 
+    /* Feature Cards */
+
     .feature-box {
-        background: white;
-        border-radius: 20px;
-        padding: 25px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        background: var(--card-bg);
+        border-radius: 25px;
+        padding: 35px;
+        border-top: 5px solid var(--primary);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
         transition: 0.3s ease;
         height: 100%;
     }
 
     .feature-box:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
 
     .feature-icon {
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    .feature-box h4 {
+        color: var(--primary);
+        font-weight: 800;
         margin-bottom: 15px;
     }
 
-    .character-card {
-        background: white;
-        border-radius: 25px;
-        padding: 25px;
-        text-align: center;
-        height: 100%;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        transition: 0.3s ease;
-    }
-
-    .character-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .character-card img {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-        margin-bottom: 15px;
-    }
-
-    .character-card h4 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: teal;
-    }
-
-    .character-card p {
-        font-size: 1rem;
+    .feature-box p {
         color: #555;
         line-height: 1.8;
+    }
+
+    /* Gameplay */
+
+    .gameplay-img {
+        border-radius: 25px;
+        overflow: hidden;
+        transition: 0.3s ease;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        border-top: 5px solid var(--primary);
+        background: var(--card-bg);
+    }
+
+    .gameplay-img:hover {
+        transform: scale(1.03);
+    }
+
+    .gameplay-img img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
     }
 
     @media (max-width: 768px) {
 
         .banner img {
-            height: 70vh;
+            height: 75vh;
         }
 
         .banner-overlay h1 {
@@ -139,40 +201,59 @@
         }
 
         .banner-overlay p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .section-title {
-            font-size: 2.2rem;
+            font-size: 2.1rem;
+        }
+
+        .glass-card {
+            padding: 30px;
         }
     }
 </style>
 
-<!-- Banner Section -->
+<!-- Banner -->
 <div class="p-0 container-fluid">
+
     <div class="banner">
 
-        <img src="Images/spirit_of_vastum_Banner.png"
+        <img
+            src="<?= base_url('Images/spirit_of_vastum_Banner.png') ?>"
             alt="Spirit of Vastum Banner">
 
         <div class="banner-overlay">
+
             <h1>Spirit of Vastum</h1>
 
             <p>
-                Protect the waters. Restore balance.
+                Dive into a polluted underwater world and fight to restore balance to the seas.
             </p>
 
-            <a href="<?= base_url('devlog'); ?>" class="custom-btn">
-                Visit Devlog
-            </a>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+
+                <a href="<?= base_url('story'); ?>" class="custom-btn">
+                    View Story
+                </a>
+
+                <a href="<?= base_url('devlog'); ?>" class="custom-btn">
+                    Visit Devlog
+                </a>
+
+            </div>
+
         </div>
+
     </div>
+
 </div>
 
 <main>
 
-    <!-- Welcome Section -->
+    <!-- Welcome -->
     <div class="py-5 container">
+
         <div class="text-center glass-card">
 
             <h2 class="section-title">
@@ -180,14 +261,17 @@
             </h2>
 
             <p class="section-text">
-                Explore the story, discover unique characters, and experience a world where players fight against pollution to restore balance in the ocean.
+                Explore an underwater adventure where players battle pollution,
+                protect marine life, and uncover the mysteries hidden beneath the ocean.
             </p>
 
         </div>
+
     </div>
 
-    <!-- About Section -->
+    <!-- About -->
     <div class="pb-5 container">
+
         <div class="glass-card">
 
             <h2 class="text-center section-title">
@@ -195,10 +279,16 @@
             </h2>
 
             <p class="section-text">
-                Spirit of Vastum is an environmental action game featuring Bill, a determined fish on a mission to restore polluted waters. Players collect and recycle garbage while exploring increasingly dangerous underwater environments. Along the way, Bill faces powerful enemies responsible for spreading pollution across the ocean. Through action-packed gameplay, players learn the importance of proper waste management and protecting marine life.
+                Spirit of Vastum is an environmental action game featuring Bill,
+                a determined fishfolk on a mission to restore polluted waters.
+                Players collect and recycle garbage while exploring dangerous
+                underwater environments filled with enemies and hidden secrets.
+                Through engaging gameplay, the game encourages awareness about
+                ocean pollution and the importance of protecting marine ecosystems.
             </p>
 
         </div>
+
     </div>
 
     <!-- Features -->
@@ -210,115 +300,52 @@
 
         <div class="g-4 row">
 
-            <div class="col-md-4">
-                <div class="text-center feature-box">
-                    <div class="feature-icon">🌊</div>
+            <?php foreach ($features as $feature): ?>
 
-                    <h4>Clean Polluted Waters</h4>
+                <div class="col-lg-4 col-md-6">
 
-                    <p>
-                        Collect and properly dispose of trash to restore balance in the ecosystem.
-                    </p>
+                    <div class="text-center feature-box">
+
+                        <div class="feature-icon">
+                            <?= esc($feature['icon']) ?>
+                        </div>
+
+                        <h4>
+                            <?= esc($feature['title']) ?>
+                        </h4>
+
+                        <p>
+                            <?= esc($feature['description']) ?>
+                        </p>
+
+                    </div>
+
                 </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="text-center feature-box">
-                    <div class="feature-icon">🐟</div>
-
-                    <h4>Play as Bill</h4>
-
-                    <p>
-                        Swim through dangerous waters while fighting pollution and protecting marine life.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="text-center feature-box">
-                    <div class="feature-icon">♻️</div>
-
-                    <h4>Manage Waste</h4>
-
-                    <p>
-                        Sort and recycle waste efficiently before pollution spreads further.
-                    </p>
-                </div>
-            </div>
+            <?php endforeach; ?>
 
         </div>
+
     </div>
 
-    <!-- Characters -->
+
+    <!-- Mission -->
     <div class="pb-5 container">
 
-        <h2 class="text-center section-title">
-            Featured Characters
-        </h2>
+        <div class="text-center glass-card">
 
-        <div class="g-4 row">
+            <h2 class="section-title">
+                Our Mission
+            </h2>
 
-            <!-- Bill -->
-            <div class="col-lg-3 col-md-6">
-                <div class="character-card">
-
-                    <img src="Images/Bill.png" alt="Bill">
-
-                    <h4>Bill</h4>
-
-                    <p>
-                        A hardworking fishfolk from the West Philippine Sea who joins the River Corps to help clean and protect the ocean.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- Gill -->
-            <div class="col-lg-3 col-md-6">
-                <div class="character-card">
-
-                    <img src="Images/Gill.png" alt="Gill">
-
-                    <h4>Gill</h4>
-
-                    <p>
-                        A laidback senior member of the River Corps who guides Bill throughout his journey.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- Corxalis -->
-            <div class="col-lg-3 col-md-6">
-                <div class="character-card">
-
-                    <img src="Images/Corxalis.png" alt="Corxalis">
-
-                    <h4>Corxalis</h4>
-
-                    <p>
-                        The mysterious Spirit of Vastum who maintains balance between nature and external forces.
-                    </p>
-
-                </div>
-            </div>
-
-            <!-- Boss -->
-            <div class="col-lg-3 col-md-6">
-                <div class="character-card">
-
-                    <img src="Images/TheBoss.png" alt="The Boss">
-
-                    <h4>The Boss</h4>
-
-                    <p>
-                        The strict leader of the River Corps who assigns Bill to Gill and watches over the team.
-                    </p>
-
-                </div>
-            </div>
+            <p class="section-text">
+                Spirit of Vastum aims to inspire players to care for the environment
+                by spreading awareness about ocean pollution through storytelling,
+                exploration, and immersive gameplay experiences.
+            </p>
 
         </div>
+
     </div>
 
 </main>
