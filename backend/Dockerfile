@@ -17,7 +17,7 @@ RUN docker-php-ext-configure intl \
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # Set working dir BEFORE copying composer files so install runs in the right place
-WORKDIR /var/www/html
+WORKDIR /var/www/html/backend
 
 # Leverage Docker layer caching for deps
 COPY composer.json composer.lock* ./
