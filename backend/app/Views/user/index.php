@@ -220,7 +220,7 @@ $screenshots = [
     <div class="banner">
 
         <img
-            <img src="Images/spirit_of_vastum_Banner.png" alt="Samuel"
+            <img src="Images/spirit_of_vastum_Banner.png" alt="banner"
             alt="Spirit of Vastum Banner">
 
         <div class="banner-overlay">
