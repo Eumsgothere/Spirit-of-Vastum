@@ -220,7 +220,7 @@ $screenshots = [
     <div class="banner">
 
         <img
-            src="<?= base_url('Images/spirit_of_vastum_Banner.png') ?>"
+            <img src="Images/spirit_of_vastum_Banner.png" alt="Samuel"
             alt="Spirit of Vastum Banner">
 
         <div class="banner-overlay">
