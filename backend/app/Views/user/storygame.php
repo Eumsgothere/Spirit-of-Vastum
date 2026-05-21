@@ -107,13 +107,13 @@
 
     .section-title {
         color: var(--primary-dark);
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 900;
         margin-bottom: 25px;
     }
 
     .section-text {
-        font-size: 2.5rem;
+        font-size: 1.80rem;
         line-height: 1.9;
         color: var(--primary-dark);
     }
