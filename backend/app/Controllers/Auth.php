@@ -96,27 +96,24 @@ class Auth extends BaseController
         ]);
 
         // Build reset link
-        $resetLink = base_url("reset-password/$token");
+       $resetLink = base_url("reset-password/$token");
 
-        // Send email
-        $emailService = \Config\Services::email();
-        $emailService->setTo($user['email']);
-        $emailService->setSubject('Password Reset Request');
-        $emailService->setMessage("
-        <p>Hello {$user['first_name']},</p>
-        <p>You requested a password reset. Click the link below to set a new password:</p>
-        <p><a href='{$resetLink}'>{$resetLink}</a></p>
-        <p>This link will expire in 1 hour.</p>
-    ");
+$emailService = \Config\Services::email();
+$emailService->setFrom('no-reply@yourdomain.com', 'Your App Name'); // ✅ add this
+$emailService->setTo($user['email']);
+$emailService->setSubject('Password Reset Request');
+$emailService->setMessage("
+    <p>Hello {$user['first_name']},</p>
+    <p>You requested a password reset. Click the link below to set a new password:</p>
+    <p><a href='{$resetLink}'>{$resetLink}</a></p>
+    <p>This link will expire in 1 hour.</p>
+");
 
-        if ($emailService->send()) {
-            return redirect()->to('/login')->with('success', 'Password reset link sent to your email');
-        } else {
-            // Debugging: show error details if needed
-            return redirect()->back()->with('error', $emailService->printDebugger(['headers']));
-        }
-    }
-
+if ($emailService->send()) {
+    return redirect()->to('/login')->with('success', 'Password reset link sent to your email');
+} else {
+    return redirect()->back()->with('error', $emailService->printDebugger(['headers']));
+}
 
     public function showResetForm($token)
     {
