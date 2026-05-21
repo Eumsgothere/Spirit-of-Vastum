@@ -219,7 +219,7 @@
                     <li class="nav-item">
                         <a class="nav-link <?= ($current == 'updates' ? 'active' : '') ?>"
                             href="/updates">
-                            Update Log
+                            Update Logs
                         </a>
                     </li>
 

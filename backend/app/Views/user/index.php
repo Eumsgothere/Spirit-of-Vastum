@@ -330,25 +330,6 @@ $screenshots = [
     </div>
 
 
-    <!-- Mission -->
-    <div class="pb-5 container">
-
-        <div class="text-center glass-card">
-
-            <h2 class="section-title">
-                Our Mission
-            </h2>
-
-            <p class="section-text">
-                Spirit of Vastum aims to inspire players to care for the environment
-                by spreading awareness about ocean pollution through storytelling,
-                exploration, and immersive gameplay experiences.
-            </p>
-
-        </div>
-
-    </div>
-
 </main>
 
 <?= view('components/footer'); ?>
