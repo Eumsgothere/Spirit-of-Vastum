@@ -23,11 +23,6 @@
         padding: 100px 20px 50px;
     }
 
-    .contact-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-    }
 
     .contact-content {
         position: relative;

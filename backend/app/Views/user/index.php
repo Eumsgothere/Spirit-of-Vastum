@@ -59,7 +59,6 @@ $screenshots = [
         width: 100%;
         height: 95vh;
         object-fit: cover;
-        filter: brightness(55%);
     }
 
     .banner-overlay {
