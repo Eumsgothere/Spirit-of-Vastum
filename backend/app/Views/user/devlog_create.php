@@ -10,8 +10,13 @@
                     <input class="form-control" name="title" placeholder="Title" required>
                 </div>
                 <div class="mb-3">
-                    <input class="form-control" name="date" type="date" required>
+                    <input class="form-control"
+                        name="date"
+                        type="date"
+                        value="<?= date('Y-m-d'); ?>"
+                        required>
                 </div>
+
                 <div class="mb-3">
                     <textarea class="form-control" name="content" rows="6" placeholder="Content" required></textarea>
                 </div>

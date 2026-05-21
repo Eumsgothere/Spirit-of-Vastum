@@ -69,6 +69,7 @@ class Auth extends BaseController
         session()->destroy();
         return redirect()->to('/');
     }
+
     public function showForgotForm()
     {
         return view('auth/forgot_password');
@@ -114,7 +115,6 @@ class Auth extends BaseController
             return redirect()->back()->with('error', $emailService->printDebugger(['headers']));
         }
     }
-
 
     public function showResetForm($token)
     {

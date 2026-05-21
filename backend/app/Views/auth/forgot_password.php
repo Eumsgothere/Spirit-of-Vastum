@@ -145,6 +145,9 @@
         <p class="login-subtitle">
             Enter your email address and we’ll send you a link to reset your password.
         </p>
+        <?= view('components/alerts'); ?>
+
+        <h3 class="login-title">Forgot Password</h3>
 
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger">
