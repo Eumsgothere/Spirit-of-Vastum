@@ -2,6 +2,8 @@
 
 <div class="login-section">
     <div class="login-card">
+        <?= view('components/alerts'); ?>
+
         <h3 class="login-title">Forgot Password</h3>
 
         <?php if (session()->getFlashdata('error')): ?>
