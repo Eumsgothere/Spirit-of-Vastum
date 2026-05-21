@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
 
     <title>Spirit of Vastum</title>
+    <link rel="icon" type="image/png" href="<?= base_url('Images/favicon-spiritofvastum.png'); ?>">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -199,6 +200,12 @@
                         <a class="nav-link <?= ($current == '' ? 'active' : '') ?>"
                             href="/">
                             Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
+                            href="/storygame">
+                            Story
                         </a>
                     </li>
 
