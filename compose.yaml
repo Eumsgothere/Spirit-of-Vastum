@@ -6,10 +6,8 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     working_dir: /var/www/html
-    init: true
     volumes:
       - ./backend:/var/www/html
-      - /var/www/html/vendor
     environment:
       CI_ENVIRONMENT: development
     depends_on:
@@ -18,7 +16,6 @@ services:
 
   nginx:
     image: nginx:alpine
-    init: true
     ports:
       - "8090:80"
     volumes:
@@ -48,7 +45,6 @@ services:
 
   phpmyadmin:
     image: phpmyadmin:latest
-    profiles: [ "tools" ]
     ports:
       - "8091:80"
     environment:
