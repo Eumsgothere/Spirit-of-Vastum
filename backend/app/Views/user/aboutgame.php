@@ -181,6 +181,13 @@ $screenshots = [
             margin-bottom: 30px;
             padding-bottom: 40px;
         }
+
+        .about-image {
+            max-height: 400px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+        }
+
     }
 </style>
 
@@ -188,15 +195,29 @@ $screenshots = [
 
     <!-- HERO -->
     <div class="mb-5 about-hero">
-        <h1 class="about-title">About The Game</h1>
+        <div class="align-items-center row">
 
-        <p class="about-description">
-            Spirit of Vastum is an underwater adventure game focused on environmental awareness.
-            Players take control of Bill, a brave fish determined to stop pollution and restore
-            balance to the ocean. Through exploration, missions, and waste-cleaning mechanics,
-            players experience both fun gameplay and meaningful lessons about protecting marine life.
-        </p>
+            <!-- Text Column -->
+            <div class="col-lg-6">
+                <h1 class="about-title">About The Game</h1>
+                <p class="about-description">
+                    Spirit of Vastum is an underwater adventure game focused on environmental awareness.
+                    Players take control of Bill, a brave fish determined to stop pollution and restore
+                    balance to the ocean. Through exploration, missions, and waste-cleaning mechanics,
+                    players experience both fun gameplay and meaningful lessons about protecting marine life.
+                </p>
+            </div>
+
+            <!-- Image Column -->
+            <div class="text-center col-lg-6">
+                <link rel="icon" type="image/png" href="<?= base_url('Images/favicon-spiritofvastum.png'); ?>">
+                alt="Spirit of Vastum Preview"
+                class="img-fluid about-image">
+            </div>
+
+        </div>
     </div>
+
 
     <!-- GAME FEATURES -->
     <div class="mt-5 text-center">
