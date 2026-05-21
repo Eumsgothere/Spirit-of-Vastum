@@ -95,12 +95,10 @@ class Auth extends BaseController
             'expires_at' => $expires,
         ]);
 
-        $resetLink = base_url("reset-password/$token");
-        // FOR DEV LANG TOH BEFORE TAYO MAG DEPLOY
-        echo "Reset link (dev only): <a href='$resetLink'>$resetLink</a>";
-        exit;
+        // Build reset link
         $resetLink = base_url("reset-password/$token");
 
+        // Send email
         $emailService = \Config\Services::email();
         $emailService->setTo($user['email']);
         $emailService->setSubject('Password Reset Request');
@@ -114,9 +112,11 @@ class Auth extends BaseController
         if ($emailService->send()) {
             return redirect()->to('/login')->with('success', 'Password reset link sent to your email');
         } else {
-            return redirect()->back()->with('error', 'Unable to send email. Please try again.');
+            // Debugging: show error details if needed
+            return redirect()->back()->with('error', $emailService->printDebugger(['headers']));
         }
     }
+
 
     public function showResetForm($token)
     {
