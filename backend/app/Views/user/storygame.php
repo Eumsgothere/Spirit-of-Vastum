@@ -5,16 +5,11 @@
     <div class="container">
 
         <!-- Story Card -->
-        <section class="mb-5 p-5 story-card"
-            style="background:#9DBEBB; 
-                    border-radius:25px; 
-                    box-shadow:0 10px 25px rgba(0,0,0,0.15); 
-                    border:2px solid #77ACA2;">
-            <h2 class="mb-4 text-center story-title"
-                style="color:#031926; font-weight:900; letter-spacing:2px;">
+        <section class="mb-5 text-center glass-card">
+            <h2 class="section-title">
                 Spirit of Vastum
             </h2>
-            <p class="text-center story-content lead" style="color:#031926;">
+            <p class="section-text">
                 Spirit of Vastum follows the journey of Bill, a young fishfolk who joins the River Corps to help protect the ocean from the growing threat of pollution.
                 As he explores dangerous waters filled with waste and mysterious corruption, Bill encounters allies who guide him through the challenges hidden beneath the sea.
                 Along the way, he uncovers secrets connected to the Spirit of Vastum — an ancient force tied to the balance of the ocean itself.
@@ -80,5 +75,48 @@
         </div>
     </div>
 </div>
+
+<style>
+    :root {
+        --primary: #468189;
+        /* Teal */
+        --primary-dark: #031926;
+        /* Ink Black */
+        --secondary: #9DBEBB;
+        /* Ash Grey */
+        --card-bg: #F4E9CD;
+        /* Vanilla Cream */
+        --page-bg: #ece3cb;
+        /* Neutral background */
+    }
+
+    body {
+        background: var(--page-bg);
+        color: #444;
+    }
+
+    .glass-card {
+        background: var(--card-bg);
+        border-radius: 30px;
+        padding: 45px;
+        border-top: 6px solid var(--primary);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        margin-top: 60px;
+        /* padding on top */
+    }
+
+    .section-title {
+        color: var(--primary-dark);
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 25px;
+    }
+
+    .section-text {
+        font-size: 1.15rem;
+        line-height: 1.9;
+        color: var(--primary-dark);
+    }
+</style>
 
 <?= view('components/footer'); ?>
