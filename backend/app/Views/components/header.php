@@ -201,6 +201,12 @@
                             Home
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
+                            href="/storygame">
+                            Story
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($current == 'faq' ? 'active' : '') ?>"
@@ -237,12 +243,6 @@
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
-                            href="/storygame">
-                            Story
-                        </a>
-                    </li>
 
                 </ul>
 
