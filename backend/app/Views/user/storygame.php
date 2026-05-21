@@ -141,11 +141,9 @@ $characters = [
                                 </div>
 
                                 <div class="character-image">
-
                                     <img
-                                        src="<?= base_url($character['image']) ?>"
+                                        src="/<?= esc($character['image']) ?>"
                                         alt="<?= esc($character['name']) ?>">
-
                                 </div>
 
                             </div>
