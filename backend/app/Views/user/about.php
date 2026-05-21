@@ -118,7 +118,7 @@
                         class="mb-3 rounded-circle img-fluid">
 
                     <h5 class="member-name">ADISON, JUSTINE LYLE</h5>
-                    <p class="member-role">Project Lead & Lead Developer</p>
+                    <p class="member-role">Project Lead & Game Developer</p>
                 </div>
             </div>
 
@@ -128,7 +128,7 @@
                         class="mb-3 rounded-circle img-fluid">
 
                     <h5 class="member-name">CAPAPAS, NAOMIE FEONA</h5>
-                    <p class="member-role">3D Designer & Website Designer</p>
+                    <p class="member-role">3D Designer & Website Developer</p>
                 </div>
             </div>
 
@@ -148,7 +148,7 @@
                         class="mb-3 rounded-circle img-fluid">
 
                     <h5 class="member-name">ARABE, VINCE CARLOS</h5>
-                    <p class="member-role">Document Specialist</p>
+                    <p class="member-role">Document Specialist & Website Designer</p>
                 </div>
             </div>
 
@@ -158,7 +158,7 @@
                         class="mb-3 rounded-circle img-fluid">
 
                     <h5 class="member-name">ESPIRITU, SAMUEL TERRENCE</h5>
-                    <p class="member-role">Document Specialist</p>
+                    <p class="member-role">Document Specialist & 2D Artist</p>
                 </div>
             </div>
 
