@@ -1,4 +1,4 @@
-name: ad-ci4
+version: "3.9"
 
 services:
   php:
@@ -15,15 +15,6 @@ services:
     depends_on:
       mysql:
         condition: service_healthy
-    develop:
-      watch:
-        - action: sync
-          path: ./backend
-          target: /var/www/html
-        - action: rebuild
-          path: ./backend/composer.json
-        - action: rebuild
-          path: ./backend/composer.lock
 
   nginx:
     image: nginx:alpine
@@ -36,14 +27,6 @@ services:
     depends_on:
       php:
         condition: service_started
-    develop:
-      watch:
-        - action: sync
-          path: ./backend
-          target: /var/www/html
-        - action: sync+restart
-          path: ./backend/nginx.conf
-          target: /etc/nginx/conf.d/default.conf
 
   mysql:
     image: mysql:8.0
