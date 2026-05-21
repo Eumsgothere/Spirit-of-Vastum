@@ -210,7 +210,7 @@ $screenshots = [
 
             <!-- Image Column -->
             <div class="text-center col-lg-6">
-                <img src="<?= base_url('Images/favicon-spiritofvastum'); ?>"
+                <img src="<?= base_url('Images\favicon-spiritofvastum.png'); ?>"
                     alt="Spirit of Vastum Preview"
                     class="img-fluid about-image">
             </div>
