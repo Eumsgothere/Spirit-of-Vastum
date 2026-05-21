@@ -98,7 +98,7 @@ class Auth extends BaseController
         $resetLink = base_url("reset-password/$token");
 
         $emailService = \Config\Services::email();
-        $emailService->setFrom('no-reply@yourdomain.com', 'Your App Name'); // ✅ required
+        $emailService->setFrom('no-reply@yourdomain.com', 'Spirit of Vastum Game Website');
         $emailService->setTo($user['email']);
         $emailService->setSubject('Password Reset Request');
         $emailService->setMessage("
@@ -113,7 +113,7 @@ class Auth extends BaseController
         } else {
             return redirect()->back()->with('error', $emailService->printDebugger(['headers']));
         }
-    } // ✅ close the function here
+    }
 
 
     public function showResetForm($token)
