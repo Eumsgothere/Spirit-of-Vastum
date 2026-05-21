@@ -84,7 +84,7 @@
         /* Ink Black */
         --secondary: #9DBEBB;
         /* Ash Grey */
-        --card-bg: #F4E9CD;
+        --card-bg: #ffffff;
         /* Vanilla Cream */
         --page-bg: #ece3cb;
         /* Neutral background */
@@ -107,13 +107,13 @@
 
     .section-title {
         color: var(--primary-dark);
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: 900;
         margin-bottom: 25px;
     }
 
     .section-text {
-        font-size: 1.15rem;
+        font-size: 2.5rem;
         line-height: 1.9;
         color: var(--primary-dark);
     }
