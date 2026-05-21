@@ -10,11 +10,6 @@
                     border-radius:25px; 
                     box-shadow:0 10px 25px rgba(0,0,0,0.15); 
                     border:2px solid #77ACA2;">
-            <header class="mb-4 story-topbar"
-                style="height:8px; 
-                     background:linear-gradient(to right,#031926,#468189); 
-                     border-radius:6px;">
-            </header>
             <h2 class="mb-4 text-center story-title"
                 style="color:#031926; font-weight:900; letter-spacing:2px;">
                 Spirit of Vastum
