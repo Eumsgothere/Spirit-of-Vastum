@@ -234,12 +234,12 @@ $screenshots = [
 
             <div class="d-flex flex-wrap justify-content-center gap-3">
 
-                <a href="<?= base_url('story'); ?>" class="custom-btn">
+                <a href="<?= base_url('storygame'); ?>" class="custom-btn">
                     View Story
                 </a>
 
-                <a href="<?= base_url('devlog'); ?>" class="custom-btn">
-                    Visit Devlog
+                <a href="<?= base_url('updates'); ?>" class="custom-btn">
+                    Visit Update Logs
                 </a>
 
             </div>

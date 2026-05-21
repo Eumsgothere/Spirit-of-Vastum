@@ -5,7 +5,7 @@
 
         <!-- Page Header -->
         <div class="mb-5 text-center">
-            <h1 class="devlog-title">Developer Logs</h1>
+            <h1 class="devlog-title">Update Logs</h1>
             <p class="devlog-subtitle">
                 Follow the latest updates, improvements, and development progress of Spirit of Vastum.
             </p>
@@ -27,7 +27,7 @@
         <!-- Create Button -->
         <?php if (session()->get('role') === 'admin'): ?>
             <div class="mb-4 text-end">
-                <a href="<?= base_url('devlog/create'); ?>" class="btn create-btn">
+                <a href="<?= base_url('updates/create'); ?>" class="btn create-btn">
                     + Create Post
                 </a>
             </div>
@@ -65,7 +65,7 @@
                             <!-- Admin Controls -->
                             <?php if (session()->get('role') === 'admin'): ?>
                                 <div class="mt-4 text-end">
-                                    <form action="<?= base_url('devlog/delete/' . $post['id']); ?>" method="post" style="display:inline;">
+                                    <form action="<?= base_url('updates/delete/' . $post['id']); ?>" method="post" style="display:inline;">
                                         <button type="submit" class="btn delete-btn">
                                             Delete
                                         </button>

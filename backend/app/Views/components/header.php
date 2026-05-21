@@ -217,8 +217,8 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'devlog' ? 'active' : '') ?>"
-                            href="/devlog">
+                        <a class="nav-link <?= ($current == 'updates' ? 'active' : '') ?>"
+                            href="/updates">
                             Update Log
                         </a>
                     </li>
@@ -258,7 +258,7 @@
                             <li class="nav-item">
 
                                 <a class="nav-link admin-link"
-                                    href="/devlog/create">
+                                    href="/updates/create">
 
                                     Create Post
 

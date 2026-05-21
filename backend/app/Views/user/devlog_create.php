@@ -3,9 +3,9 @@
 <div class="d-flex align-items-center justify-content-center container" style="min-height: 80vh;">
     <div class="shadow-lg card" style="max-width: 600px; width: 100%;">
         <div class="card-body">
-            <h3 class="mb-4 text-center" style="color: teal;">Create Devlog Post</h3>
+            <h3 class="mb-4 text-center" style="color: teal;">Create Update Log Post</h3>
 
-            <form action="<?= base_url('devlog/store'); ?>" method="post">
+            <form action="<?= base_url('updates/store'); ?>" method="post">
                 <div class="mb-3">
                     <input class="form-control" name="title" placeholder="Title" required>
                 </div>
