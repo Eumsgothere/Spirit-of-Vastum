@@ -9,13 +9,13 @@ class UsersSeeder extends Seeder
     public function run()
     {
         $now = date('Y-m-d H:i:s');
-        $password = password_hash('Password123!', PASSWORD_DEFAULT);
+        $password = password_hash('ThirdeyeFEU2025', PASSWORD_DEFAULT);
 
         $data = [
             [
                 'first_name' => 'Admin',
                 'last_name'  => 'User',
-                'email'      => 'admin@example.com',
+                'email'      => 'thirdeyefeu@gmail.com',
                 'password_hash' => $password,
                 'type'       => 'admin',
                 'account_status' => 1,
