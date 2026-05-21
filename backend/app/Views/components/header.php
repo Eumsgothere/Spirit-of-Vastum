@@ -210,6 +210,13 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
+                            href="/storygame">
+                            Story
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link <?= ($current == 'faq' ? 'active' : '') ?>"
                             href="/faq">
                             FAQ
@@ -219,7 +226,7 @@
                     <li class="nav-item">
                         <a class="nav-link <?= ($current == 'devlog' ? 'active' : '') ?>"
                             href="/devlog">
-                            Devlog
+                            Update Log
                         </a>
                     </li>
 
@@ -231,19 +238,18 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'about' ? 'active' : '') ?>"
-                            href="/about">
-                            About Team
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link <?= ($current == 'aboutgame' ? 'active' : '') ?>"
                             href="/aboutgame">
                             About Game
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'about' ? 'active' : '') ?>"
+                            href="/about">
+                            About Team
+                        </a>
+                    </li>
 
                 </ul>
 

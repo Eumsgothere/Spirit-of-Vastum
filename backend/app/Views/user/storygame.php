@@ -2,70 +2,31 @@
 
 <?php
 
-$chapters = [
-    [
-        'title' => 'Chapter 1: The Polluted Depths',
-        'content' => 'Bill begins his journey in murky waters filled with trash and toxins.
-        As he swims deeper, he realizes the scale of pollution threatening marine life.
-        Dangerous waste drifts across the ocean floor while weakened sea creatures struggle to survive.
-        Witnessing the destruction firsthand motivates Bill to take action and protect the waters he calls home.'
-    ],
-    [
-        'title' => 'Chapter 2: Allies of the Sea',
-        'content' => 'Along the way, Bill meets friendly sea creatures who guide him and
-        provide knowledge about protecting their fragile ecosystem.
-        Together, they explore hidden reefs, abandoned ruins, and polluted rivers while discovering
-        the importance of unity and environmental responsibility.'
-    ],
-    [
-        'title' => 'Chapter 3: The Final Battle',
-        'content' => 'Bill confronts the source of pollution — a massive waste dump
-        spreading toxins across the ocean. With courage and determination,
-        he fights to restore balance and bring hope back to the seas.
-        As the battle intensifies, Bill realizes that saving the ocean will require sacrifice,
-        teamwork, and the courage to face overwhelming challenges.'
-    ]
-];
+$story = "Spirit of Vastum follows the journey of Bill, a young fishfolk who joins the River Corps to help protect the ocean from the growing threat of pollution. As he explores dangerous waters filled with waste and mysterious corruption, Bill encounters allies who guide him through the challenges hidden beneath the sea. Along the way, he uncovers secrets connected to the Spirit of Vastum — an ancient force tied to the balance of the ocean itself. Through teamwork, courage, and discovery, Bill learns that protecting the sea is more than just a mission; it is a responsibility shared by everyone.";
 
 $characters = [
     [
         'name' => 'Bill',
         'image' => 'Images/Bill.png',
-        'description' => 'Bill is a hardworking fishfolk from the West Philippine Sea.
-        Determined and resilient, he joins the River Corps to help clean and protect the ocean.
-        Despite his lack of experience, Bill possesses strong determination and a deep love for marine life.
-        Throughout his adventure, he learns valuable lessons about leadership, courage, and responsibility
-        while inspiring others to fight against pollution and environmental destruction.'
+        'description' => 'A determined young fishfolk who joins the River Corps to protect the ocean. Despite being inexperienced, Bill’s courage and dedication push him forward throughout his journey.'
     ],
 
     [
         'name' => 'Gill',
         'image' => 'Images/Gill.png',
-        'description' => 'Gill is a laidback senior member of the River Corps.
-        With years of experience, he guides Bill throughout his journey.
-        Although calm and humorous, Gill is highly skilled in underwater survival and understands
-        the dangers hidden beneath polluted waters. He acts as Bill’s mentor and teaches him
-        how to remain focused even during difficult situations.'
+        'description' => 'A relaxed but highly experienced member of the River Corps. Gill serves as Bill’s mentor, helping him survive the dangers hidden within polluted waters.'
     ],
 
     [
         'name' => 'Corxalis',
         'image' => 'Images/Corxalis.png',
-        'description' => 'Corxalis is the mysterious Spirit of Vastum,
-        a guardian who maintains balance between nature and external forces.
-        Ancient and wise, Corxalis appears only during moments of great danger to the ocean.
-        With powers connected to the sea itself, Corxalis helps guide Bill toward understanding
-        the true consequences of pollution and humanity’s impact on marine ecosystems.'
+        'description' => 'The mysterious Spirit of Vastum and guardian of the ocean’s balance. Corxalis watches over the sea and appears during moments of great danger.'
     ],
 
     [
         'name' => 'The Boss',
         'image' => 'Images/TheBoss.png',
-        'description' => 'The Boss is the strict leader of the River Corps.
-        Known for discipline and authority, he assigns Bill to Gill.
-        While feared by many recruits because of his serious personality,
-        he deeply cares about the safety of the ocean and the people under his command.
-        His leadership keeps the River Corps united during dangerous missions and times of crisis.'
+        'description' => 'The strict leader of the River Corps who values discipline and responsibility. Though serious in nature, he deeply cares for the safety of both his team and the ocean.'
     ]
 ];
 
@@ -83,72 +44,79 @@ $characters = [
             </h1>
 
             <p class="story-subtitle">
-                Discover the journey of Bill and the fight to restore balance in the ocean.
+                Discover the journey of Bill and uncover the mysteries hidden beneath the polluted seas.
             </p>
 
         </header>
 
-        <!-- Story Chapters -->
+        <!-- Story Section -->
         <div class="justify-content-center row">
 
             <div class="col-lg-10">
 
-                <?php foreach ($chapters as $chapter): ?>
+                <section class="mb-5 story-card">
 
-                    <section class="mb-5 story-card">
+                    <header class="story-topbar"></header>
 
-                        <header class="story-topbar"></header>
+                    <article class="p-4 p-md-5">
 
-                        <article class="p-4">
+                        <h2 class="story-section-title">
+                            Spirit of Vastum
+                        </h2>
 
-                            <h2 class="chapter-title">
-                                <?= esc($chapter['title']) ?>
-                            </h2>
+                        <p class="story-content">
+                            <?= esc($story) ?>
+                        </p>
 
-                            <p class="chapter-content">
-                                <?= esc($chapter['content']) ?>
-                            </p>
+                    </article>
 
-                        </article>
-
-                    </section>
-
-                <?php endforeach; ?>
+                </section>
 
                 <!-- Character Section -->
                 <section class="character-section">
 
-                    <div class="py-5 container">
+                    <div class="container">
 
                         <h2 class="text-center character-title">
                             Featured Characters
                         </h2>
 
-                        <?php foreach ($characters as $index => $character): ?>
+                        <div class="row g-4">
 
-                            <div class="character-block <?= $index % 2 ? 'reverse' : '' ?>">
+                            <?php foreach ($characters as $character): ?>
 
-                                <div class="character-text">
+                                <div class="col-lg-6">
 
-                                    <h3>
-                                        <?= esc($character['name']) ?>
-                                    </h3>
+                                    <div class="h-100 character-card">
 
-                                    <p>
-                                        <?= esc($character['description']) ?>
-                                    </p>
+                                        <div class="character-image-wrapper">
+
+                                            <img
+                                                src="/<?= esc($character['image']) ?>"
+                                                alt="<?= esc($character['name']) ?>"
+                                                class="character-image">
+
+                                        </div>
+
+                                        <div class="character-content">
+
+                                            <h3>
+                                                <?= esc($character['name']) ?>
+                                            </h3>
+
+                                            <p>
+                                                <?= esc($character['description']) ?>
+                                            </p>
+
+                                        </div>
+
+                                    </div>
 
                                 </div>
 
-                                <div class="character-image">
-                                    <img
-                                        src="/<?= esc($character['image']) ?>"
-                                        alt="<?= esc($character['name']) ?>">
-                                </div>
+                            <?php endforeach; ?>
 
-                            </div>
-
-                        <?php endforeach; ?>
+                        </div>
 
                     </div>
 
@@ -167,10 +135,11 @@ $characters = [
         --primary: #00747c;
         --accent: #6fbdbb;
         --bg-light: #f7eedc;
+        --bg-main: #e3dac0;
     }
 
     body {
-        background-color: #e3dac0;
+        background-color: var(--bg-main);
     }
 
     .story-wrapper {
@@ -179,27 +148,26 @@ $characters = [
 
     .story-header {
         background-color: var(--bg-light);
-        border-radius: 20px;
-        padding: 60px 20px;
-        margin-bottom: 60px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border-radius: 25px;
+        padding: 70px 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
     .story-title {
         color: var(--primary);
-        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
         font-weight: 900;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
     .story-subtitle {
-        color: var(--accent);
-        font-size: 1.2rem;
-        max-width: 700px;
+        color: #4d6668;
+        font-size: 1.15rem;
+        max-width: 750px;
         margin: auto;
-        line-height: 1.8;
+        line-height: 2;
         font-weight: 500;
     }
 
@@ -207,15 +175,13 @@ $characters = [
         background: var(--bg-light);
         border-radius: 25px;
         overflow: hidden;
-        border: 2px solid rgba(70, 129, 137, 0.3);
+        border: 2px solid rgba(70, 129, 137, 0.2);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        margin-bottom: 40px;
+        transition: 0.3s ease;
     }
 
     .story-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
     }
 
     .story-topbar {
@@ -223,122 +189,124 @@ $characters = [
         background: linear-gradient(to right, var(--primary), var(--accent));
     }
 
-    .chapter-title {
+    .story-section-title {
         color: var(--primary);
         font-size: 2rem;
         font-weight: 800;
         margin-bottom: 20px;
+        text-align: center;
     }
 
-    .chapter-content {
+    .story-content {
         color: #444;
-        font-size: 1.1rem;
+        font-size: 1.08rem;
         line-height: 2;
         text-align: justify;
     }
 
     .character-section {
-        background-color: var(--bg-light);
-        border-radius: 25px;
-        padding: 60px 20px;
-        margin-top: 60px;
+        margin-top: 70px;
+        margin-bottom: 40px;
     }
 
     .character-title {
         color: var(--primary);
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
         font-weight: 900;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 
-    .character-block {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 80px;
-        margin-bottom: 120px;
+    .character-card {
+        background: var(--bg-light);
+        border-radius: 28px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid rgba(70, 129, 137, 0.15);
     }
 
-    .character-block.reverse {
-        flex-direction: row-reverse;
+    .character-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     }
 
-    .character-text {
-        flex: 1;
-        max-width: 650px;
+    .character-image-wrapper {
+        background: linear-gradient(to bottom, #d8efe8, #f7eedc);
+        padding: 30px;
+        text-align: center;
     }
 
-    .character-text h3 {
-        font-size: 2.4rem;
-        font-weight: 800;
-        color: var(--primary);
-        margin-bottom: 20px;
-    }
-
-    .character-text p {
-        font-size: 1.15rem;
-        line-height: 2;
-        text-align: justify;
-        color: #333;
-    }
-
-    .character-image img {
-        max-width: 360px;
-        border-radius: 20px;
-        padding: 15px;
-        background: rgba(255, 255, 255, 0.4);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    .character-image {
+        width: 100%;
+        max-width: 260px;
         transition: transform 0.3s ease;
     }
 
-    .character-image img:hover {
+    .character-card:hover .character-image {
         transform: scale(1.05);
+    }
+
+    .character-content {
+        padding: 30px;
+    }
+
+    .character-content h3 {
+        color: var(--primary);
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .character-content p {
+        color: #444;
+        font-size: 1.02rem;
+        line-height: 1.9;
+        text-align: justify;
     }
 
     @media (max-width: 768px) {
 
+        .story-header {
+            padding: 50px 20px;
+        }
+
         .story-title {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
         }
 
-        .chapter-title {
-            font-size: 1.5rem;
-        }
-
-        .chapter-content {
+        .story-subtitle {
             font-size: 1rem;
+        }
+
+        .story-section-title {
+            font-size: 1.7rem;
+        }
+
+        .story-content {
+            font-size: 1rem;
+            line-height: 1.8;
         }
 
         .character-title {
             font-size: 2.2rem;
         }
 
-        .character-block {
-            flex-direction: column;
-            text-align: center;
-            gap: 40px;
-            margin-bottom: 80px;
+        .character-content {
+            padding: 25px;
         }
 
-        .character-block.reverse {
-            flex-direction: column;
+        .character-content h3 {
+            font-size: 1.7rem;
         }
 
-        .character-text {
-            max-width: 100%;
-        }
-
-        .character-text h3 {
-            font-size: 2rem;
-        }
-
-        .character-text p {
-            font-size: 1rem;
+        .character-content p {
+            font-size: 0.98rem;
             line-height: 1.8;
         }
 
-        .character-image img {
-            max-width: 240px;
+        .character-image {
+            max-width: 200px;
         }
     }
 </style>
