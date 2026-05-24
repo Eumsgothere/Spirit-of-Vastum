@@ -1,7 +1,7 @@
 <?= view('components/header'); ?>
 
 <?php
-
+define('CI_ENVIRONMENT', 'production');
 $features = [
     [
         'icon' => '🌊',
