@@ -52,3 +52,5 @@ $routes->post('updates/delete/(:num)', 'Devlog::delete/$1');
 /* STORYGAME */
 
 $routes->get('storygame', 'Users::storygame');
+
+$routes->get('uploads/(:any)', 'FileController::show/$1');
