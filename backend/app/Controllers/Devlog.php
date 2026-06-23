@@ -12,7 +12,6 @@ class Devlog extends BaseController
         $model = new DevlogModel();
         $posts = $model->findAll();
 
-        // point to updates view
         return view('user/updates', ['posts' => $posts]);
     }
 
