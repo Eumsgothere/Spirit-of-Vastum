@@ -21,8 +21,9 @@
                     <textarea class="form-control" name="content" rows="6" placeholder="Content" required></textarea>
                 </div>
                 <button type="submit" class="w-100 btn" style="background-color: teal; color: #fdf5e6;">
-                    Save Post
+                    Save Update
                 </button>
+
             </form>
         </div>
     </div>
