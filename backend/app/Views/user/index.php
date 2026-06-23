@@ -36,7 +36,7 @@ $screenshots = [
         --primary-dark: #006d70;
         --secondary: #d9d3c3;
         --card-bg: #f7f4ed;
-        --page-bg: #ece3cb;
+        --page-bg: #f2e5ca;
     }
 
     html {
