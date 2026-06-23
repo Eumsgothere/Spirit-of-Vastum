@@ -43,9 +43,10 @@ class Devlog extends BaseController
         $image = $this->request->getFile('image');
         if ($image && $image->isValid() && !$image->hasMoved()) {
             $newName = $image->getRandomName();
-            $image->move(FCPATH . 'uploads', $newName);
-            $data['image'] = $newName;   // add to data array
+            $image->move(WRITEPATH . 'uploads', $newName);
+            $data['image'] = $newName;
         }
+
 
         // Save everything
         $model->insert($data);
