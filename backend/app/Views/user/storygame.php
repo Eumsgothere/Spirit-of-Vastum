@@ -57,7 +57,7 @@
                 </p>
             </div>
             <div class="mb-5 text-center col-md-6">
-                <img src="/Images/Corxalis.png" alt="Corxalis" class="img-fluid" style="max-height:500px;">
+                <img src="/Images/Corxalisnew.png" alt="Corxalis" class="img-fluid" style="max-height:500px;">
             </div>
 
             <!-- The Boss -->
