@@ -62,6 +62,17 @@
                                 <?= esc($post['content']); ?>
                             </p>
 
+                            <!-- Image -->
+                            <?php if (!empty($post['image'])): ?>
+                                <div class="mt-3 text-center">
+                                    <img src="<?= base_url('uploads/' . $post['image']); ?>"
+                                        alt="<?= esc($post['title']); ?>"
+                                        class="shadow-sm rounded img-fluid"
+                                        style="max-height: 400px; object-fit: cover;">
+                                </div>
+                            <?php endif; ?>
+
+
                             <!-- Admin Controls -->
                             <?php if (session()->get('role') === 'admin'): ?>
                                 <div class="mt-4 text-end">
