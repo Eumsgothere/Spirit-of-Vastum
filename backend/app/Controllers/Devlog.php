@@ -31,14 +31,28 @@ class Devlog extends BaseController
         }
 
         $model = new DevlogModel();
-        $model->insert([
+
+        // Collect form data
+        $data = [
             'title'   => $this->request->getPost('title'),
             'date'    => $this->request->getPost('date'),
             'content' => $this->request->getPost('content'),
-        ]);
+        ];
+
+        // Handle image upload
+        $image = $this->request->getFile('image');
+        if ($image && $image->isValid() && !$image->hasMoved()) {
+            $newName = $image->getRandomName();
+            $image->move(FCPATH . 'uploads', $newName);
+            $data['image'] = $newName;   // add to data array
+        }
+
+        // Save everything
+        $model->insert($data);
 
         return redirect()->to('/updates')->with('success', 'Update created');
     }
+
 
     public function delete($id)
     {
