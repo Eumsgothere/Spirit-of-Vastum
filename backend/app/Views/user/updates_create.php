@@ -22,12 +22,6 @@
                     <textarea class="form-control" name="content" rows="6" placeholder="Content" required></textarea>
                 </div>
 
-                <!-- New image upload field -->
-                <div class="mb-3">
-                    <label for="image" class="form-label">Upload Image</label>
-                    <input class="form-control" type="file" name="image" accept="image/*">
-                </div>
-
                 <button type="submit" class="w-100 btn" style="background-color: teal; color: #fdf5e6;">
                     Save Update
                 </button>

@@ -39,14 +39,6 @@ class Devlog extends BaseController
             'content' => $this->request->getPost('content'),
         ];
 
-        // Handle image upload
-        $image = $this->request->getFile('image');
-        if ($image && $image->isValid() && !$image->hasMoved()) {
-            $newName = $image->getRandomName();
-            $image->move(WRITEPATH . 'uploads', $newName);
-            $data['image'] = $newName;
-        }
-
 
         // Save everything
         $model->insert($data);
