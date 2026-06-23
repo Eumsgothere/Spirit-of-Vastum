@@ -3,9 +3,9 @@
 <?php
 
 $screenshots = [
-    'Images/game1.png',
-    'Images/game2.png',
-    'Images/game3.png'
+    'Images/screenshotgame1.png',
+    'Images/screenshotgame2.png',
+    'Images/screenshotgame3.png'
 ];
 
 ?>
