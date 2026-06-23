@@ -81,6 +81,7 @@
 <div class="register-section">
   <div class="register-card">
     <h3 class="register-title">Register</h3>
+    <?= view('components/alerts'); ?>
 
     <?php if (session()->getFlashdata('error')): ?>
       <div class="alert alert-danger"><?= session()->getFlashdata('error') ?></div>

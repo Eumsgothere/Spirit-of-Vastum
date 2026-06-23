@@ -39,15 +39,15 @@ $routes->post('forgot-password', 'Auth::sendResetLink');
 $routes->get('reset-password/(:segment)', 'Auth::showResetForm/$1');
 $routes->post('reset-password/(:segment)', 'Auth::resetPassword/$1');
 
-/* DEVLOG */
+/* uplog */
 
-$routes->get('devlog', 'Devlog::index');
+$routes->get('updates', 'Devlog::index');
 
-$routes->get('devlog/create', 'Devlog::create');
+$routes->get('updates/create', 'Devlog::create');
 
-$routes->post('devlog/store', 'Devlog::store');
+$routes->post('updates/store', 'Devlog::store');
 
-$routes->post('devlog/delete/(:num)', 'Devlog::delete/$1');
+$routes->post('updates/delete/(:num)', 'Devlog::delete/$1');
 
 /* STORYGAME */
 

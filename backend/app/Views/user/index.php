@@ -57,10 +57,11 @@ $screenshots = [
 
     .banner img {
         width: 100%;
-        height: 95vh;
-        object-fit: cover;
-        filter: brightness(55%);
+        height: auto;
+        object-fit: contain;
+        display: block;
     }
+
 
     .banner-overlay {
         position: absolute;
@@ -233,12 +234,12 @@ $screenshots = [
 
             <div class="d-flex flex-wrap justify-content-center gap-3">
 
-                <a href="<?= base_url('story'); ?>" class="custom-btn">
+                <a href="<?= base_url('storygame'); ?>" class="custom-btn">
                     View Story
                 </a>
 
-                <a href="<?= base_url('devlog'); ?>" class="custom-btn">
-                    Visit Devlog
+                <a href="<?= base_url('updates'); ?>" class="custom-btn">
+                    Visit Update Logs
                 </a>
 
             </div>
@@ -328,25 +329,6 @@ $screenshots = [
 
     </div>
 
-
-    <!-- Mission -->
-    <div class="pb-5 container">
-
-        <div class="text-center glass-card">
-
-            <h2 class="section-title">
-                Our Mission
-            </h2>
-
-            <p class="section-text">
-                Spirit of Vastum aims to inspire players to care for the environment
-                by spreading awareness about ocean pollution through storytelling,
-                exploration, and immersive gameplay experiences.
-            </p>
-
-        </div>
-
-    </div>
 
 </main>
 

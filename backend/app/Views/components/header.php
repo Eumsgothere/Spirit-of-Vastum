@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
 
     <title>Spirit of Vastum</title>
+    <link rel="icon" type="image/png" href="<?= base_url('Images/favicon-spiritofvastum.png'); ?>">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -201,6 +202,12 @@
                             Home
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
+                            href="/storygame">
+                            Story
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link <?= ($current == 'faq' ? 'active' : '') ?>"
@@ -210,9 +217,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'devlog' ? 'active' : '') ?>"
-                            href="/devlog">
-                            Devlog
+                        <a class="nav-link <?= ($current == 'updates' ? 'active' : '') ?>"
+                            href="/updates">
+                            Update Logs
                         </a>
                     </li>
 
@@ -224,13 +231,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'about' ? 'active' : '') ?>"
-                            href="/about">
-                            About Team
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link <?= ($current == 'aboutgame' ? 'active' : '') ?>"
                             href="/aboutgame">
                             About Game
@@ -238,9 +238,9 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link <?= ($current == 'storygame' ? 'active' : '') ?>"
-                            href="/storygame">
-                            Story
+                        <a class="nav-link <?= ($current == 'about' ? 'active' : '') ?>"
+                            href="/about">
+                            About Team
                         </a>
                     </li>
 
@@ -258,7 +258,7 @@
                             <li class="nav-item">
 
                                 <a class="nav-link admin-link"
-                                    href="/devlog/create">
+                                    href="/updates/create">
 
                                     Create Post
 
