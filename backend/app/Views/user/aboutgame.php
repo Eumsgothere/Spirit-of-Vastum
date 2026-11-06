@@ -188,86 +188,56 @@ $screenshots = [
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
-        /* DOWNLOAD SECTION */
+        /* DOWNLOAD HERO */
 
-        .download-section {
-            background: linear-gradient(90deg, #004d4d, teal);
-            border-radius: 30px;
-            padding: 60px;
-            margin: 70px 0;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 77, 77, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .download-section::before {
-            content: "";
-            position: absolute;
-            top: -80px;
-            right: -80px;
-            width: 250px;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 50%;
-        }
-
-        .download-section::after {
-            content: "";
-            position: absolute;
-            bottom: -60px;
-            left: -60px;
-            width: 180px;
-            height: 180px;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 50%;
+        .download-hero {
+            background: linear-gradient(135deg, #031926, #468189);
+            border-radius: 25px;
+            padding: 70px 50px;
+            color: #F4E9CD;
+            box-shadow: 0 10px 30px rgba(3, 25, 38, 0.25);
         }
 
         .download-title {
-            color: #F4E9CD;
-            font-size: 2.8rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 2;
+            margin-bottom: 20px;
+            color: #F4E9CD;
         }
 
-        .download-text {
-            color: rgba(244, 233, 205, 0.9);
-            max-width: 750px;
-            margin: 0 auto 35px;
-            line-height: 1.9;
+        .download-description {
+            max-width: 650px;
             font-size: 1.1rem;
-            position: relative;
-            z-index: 2;
+            line-height: 2;
+            color: #dfe9e7;
+            text-align: justify;
         }
 
         .download-btn {
             display: inline-block;
+            margin-top: 20px;
             background: #F4E9CD;
             color: teal;
             text-decoration: none;
-            padding: 14px 35px;
-            border-radius: 14px;
+            padding: 14px 30px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 1.1rem;
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
         }
 
         .download-btn:hover {
-            transform: translateY(-3px);
             background: white;
             color: #004d4d;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
         }
 
-        .download-note {
-            color: rgba(244, 233, 205, 0.8);
-            margin-top: 15px;
-            position: relative;
-            z-index: 2;
+        .download-image {
+            max-height: 300px;
+            transition: transform 0.3s ease;
+        }
+
+        .download-image:hover {
+            transform: scale(1.05);
         }
     }
 </style>
@@ -299,27 +269,40 @@ $screenshots = [
         </div>
     </div>
 
-    <!-- DOWNLOAD GAME -->
-    <div class="download-section">
+    <!-- DOWNLOAD SECTION -->
+    <div class="mt-5 download-hero">
 
-        <h2 class="download-title">
-            Download Spirit of Vastum
-        </h2>
+        <div class="align-items-center row">
 
-        <p class="download-text">
-            Join Bill and the River Corps in an underwater adventure to restore balance
-            to the ocean. Explore polluted waters, complete missions, and help protect
-            marine life from the growing threat of waste.
-        </p>
+            <div class="col-lg-7">
 
-        <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
-            class="download-btn"
-            download>
-            ⬇ Download for Windows
-        </a>
+                <h2 class="download-title">
+                    Download Spirit of Vastum
+                </h2>
 
-        <div class="download-note">
-            Free to Play • Windows Platform
+                <p class="download-description">
+                    Dive into an exciting underwater adventure and help restore balance
+                    to marine ecosystems. Join Bill and the River Corps as you explore
+                    polluted waters, complete missions, and uncover the secrets hidden
+                    beneath the sea.
+                </p>
+
+                <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
+                    class="download-btn"
+                    download>
+                    Download for Windows
+                </a>
+
+            </div>
+
+            <div class="text-center col-lg-5">
+
+                <img src="<?= base_url('Images/favicon-spiritofvastum.png'); ?>"
+                    alt="Spirit of Vastum"
+                    class="img-fluid download-image">
+
+            </div>
+
         </div>
 
     </div>
