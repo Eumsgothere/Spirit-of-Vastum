@@ -257,15 +257,14 @@ $screenshots = [
             of environmental responsibility.
         </p>
 
-        <div class="d-flex justify-content-center gap-3 mt-4">
-
+        <div class="d-flex justify-content-center mt-4">
             <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
                 class="custom-btn"
                 download>
-                ⬇ Download Game
+                🎮 Download Spirit of Vastum
             </a>
-
         </div>
+
 
     </div>
     <!-- GAME FEATURES -->

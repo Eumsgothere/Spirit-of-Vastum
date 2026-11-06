@@ -27,6 +27,28 @@
             overflow-x: hidden;
         }
 
+        .custom-btn {
+            background: #008b8f;
+            color: white;
+            border: none;
+            padding: 15px 38px;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 25px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .custom-btn:hover {
+            background: #006d70;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+        }
+
         /* NAVBAR */
 
         .custom-navbar {
