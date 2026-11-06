@@ -23,7 +23,7 @@ class Users extends BaseController
 
     public function contactus()
     {
-        return view('user/contactus');
+        return view('user/ContactUS');
     }
 
     public function about()
