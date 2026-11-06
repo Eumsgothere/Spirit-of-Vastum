@@ -33,12 +33,12 @@
                 </p>
             </div>
             <div class="mb-5 text-center col-md-6">
-                <img src="/Images/Bill.png" alt="Bill" class="img-fluid" style="max-height:500px;">
+                <img src="/Images/BILL_preview.png" alt="Bill" class="img-fluid" style="max-height:500px;">
             </div>
 
             <!-- Gill -->
             <div class="mb-5 text-center col-md-6">
-                <img src="/Images/Gill.png" alt="Gill" class="img-fluid" style="max-height:500px;">
+                <img src="/Images/GILL_preview.png" alt="Gill" class="img-fluid" style="max-height:500px;">
             </div>
             <div class="mb-5 text-md-start text-center col-md-6">
                 <h2 class="character-name">Gill</h2>
@@ -57,12 +57,12 @@
                 </p>
             </div>
             <div class="mb-5 text-center col-md-6">
-                <img src="/Images/Corxalisnew.png" alt="Corxalis" class="img-fluid" style="max-height:500px;">
+                <img src="/Images/CORXALIS_preview.png" alt="Corxalis" class="img-fluid" style="max-height:500px;">
             </div>
 
             <!-- The Boss -->
             <div class="mb-5 text-center col-md-6">
-                <img src="/Images/TheBoss.png" alt="The Boss" class="img-fluid" style="max-height:500px;">
+                <img src="/Images/THE_BOSS.png" alt="The Boss" class="img-fluid" style="max-height:500px;">
             </div>
             <div class="mb-5 text-md-start text-center col-md-6">
                 <h2 class="character-name">The Boss</h2>
