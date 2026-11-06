@@ -188,56 +188,47 @@ $screenshots = [
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
-        /* DOWNLOAD HERO */
-
-        .download-hero {
+        .download-box {
             background: linear-gradient(135deg, #031926, #468189);
             border-radius: 25px;
             padding: 70px 50px;
             color: #F4E9CD;
             box-shadow: 0 10px 30px rgba(3, 25, 38, 0.25);
+            text-align: center;
         }
 
         .download-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 800;
             margin-bottom: 20px;
             color: #F4E9CD;
+            letter-spacing: 1px;
         }
 
         .download-description {
-            max-width: 650px;
+            max-width: 800px;
+            margin: 0 auto;
             font-size: 1.1rem;
             line-height: 2;
             color: #dfe9e7;
-            text-align: justify;
         }
 
         .download-btn {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 30px;
+            padding: 14px 32px;
+            border-radius: 12px;
             background: #F4E9CD;
             color: teal;
             text-decoration: none;
-            padding: 14px 30px;
-            border-radius: 12px;
             font-weight: 700;
             transition: all 0.3s ease;
         }
 
         .download-btn:hover {
-            background: white;
+            background: #fff;
             color: #004d4d;
-            transform: translateY(-3px);
-        }
-
-        .download-image {
-            max-height: 300px;
-            transition: transform 0.3s ease;
-        }
-
-        .download-image:hover {
-            transform: scale(1.05);
+            transform: translateY(-2px);
         }
     }
 </style>
@@ -270,40 +261,25 @@ $screenshots = [
     </div>
 
     <!-- DOWNLOAD SECTION -->
-    <div class="mt-5 download-hero">
+    <!-- DOWNLOAD SECTION -->
+    <div class="mb-5 download-box">
 
-        <div class="align-items-center row">
+        <h2 class="download-title">
+            Download Spirit of Vastum
+        </h2>
 
-            <div class="col-lg-7">
+        <p class="download-description">
+            Experience the adventure firsthand and join Bill on his mission to protect
+            the ocean from pollution. Explore underwater environments, complete missions,
+            and discover the mysteries hidden beneath the sea while learning the importance
+            of environmental responsibility.
+        </p>
 
-                <h2 class="download-title">
-                    Download Spirit of Vastum
-                </h2>
-
-                <p class="download-description">
-                    Dive into an exciting underwater adventure and help restore balance
-                    to marine ecosystems. Join Bill and the River Corps as you explore
-                    polluted waters, complete missions, and uncover the secrets hidden
-                    beneath the sea.
-                </p>
-
-                <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
-                    class="download-btn"
-                    download>
-                    Download for Windows
-                </a>
-
-            </div>
-
-            <div class="text-center col-lg-5">
-
-                <img src="<?= base_url('Images/favicon-spiritofvastum.png'); ?>"
-                    alt="Spirit of Vastum"
-                    class="img-fluid download-image">
-
-            </div>
-
-        </div>
+        <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
+            class="download-btn"
+            download>
+            Download for Windows
+        </a>
 
     </div>
     <!-- GAME FEATURES -->
