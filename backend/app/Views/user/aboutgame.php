@@ -258,7 +258,7 @@ $screenshots = [
         </p>
 
         <div class="d-flex justify-content-center mt-4">
-            <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
+            <a href="<?= base_url('downloads/testbuild1.zip'); ?>"
                 class="custom-btn"
                 download>
                 🎮 Download Spirit of Vastum
