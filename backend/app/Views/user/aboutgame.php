@@ -189,76 +189,85 @@ $screenshots = [
         }
 
         /* DOWNLOAD SECTION */
+
         .download-section {
-            background: linear-gradient(135deg, #031926, #468189);
+            background: linear-gradient(90deg, #004d4d, teal);
             border-radius: 30px;
-            padding: 60px 40px;
-            margin: 70px auto;
+            padding: 60px;
+            margin: 70px 0;
             text-align: center;
-            color: #F4E9CD;
-            box-shadow: 0 12px 30px rgba(3, 25, 38, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 77, 77, 0.2);
             position: relative;
             overflow: hidden;
         }
 
         .download-section::before {
-            content: "🌊";
+            content: "";
             position: absolute;
-            font-size: 8rem;
-            opacity: 0.08;
-            left: 30px;
-            top: 10px;
+            top: -80px;
+            right: -80px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
         }
 
         .download-section::after {
-            content: "🐟";
+            content: "";
             position: absolute;
-            font-size: 7rem;
-            opacity: 0.08;
-            right: 40px;
-            bottom: 10px;
+            bottom: -60px;
+            left: -60px;
+            width: 180px;
+            height: 180px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
         }
 
         .download-title {
+            color: #F4E9CD;
             font-size: 2.8rem;
             font-weight: 800;
             margin-bottom: 15px;
-            color: #F4E9CD;
+            position: relative;
+            z-index: 2;
         }
 
         .download-text {
-            max-width: 700px;
-            margin: 0 auto 30px;
+            color: rgba(244, 233, 205, 0.9);
+            max-width: 750px;
+            margin: 0 auto 35px;
+            line-height: 1.9;
             font-size: 1.1rem;
-            line-height: 1.8;
-            color: #dfe9e7;
+            position: relative;
+            z-index: 2;
         }
 
         .download-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+            display: inline-block;
             background: #F4E9CD;
-            color: #031926;
+            color: teal;
             text-decoration: none;
-            padding: 16px 40px;
-            border-radius: 999px;
+            padding: 14px 35px;
+            border-radius: 14px;
             font-weight: 700;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
 
         .download-btn:hover {
+            transform: translateY(-3px);
             background: white;
-            color: #468189;
-            transform: translateY(-4px);
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+            color: #004d4d;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
 
         .download-note {
+            color: rgba(244, 233, 205, 0.8);
             margin-top: 15px;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
         }
     }
 </style>
@@ -298,8 +307,9 @@ $screenshots = [
         </h2>
 
         <p class="download-text">
-            Dive into an exciting underwater adventure, restore balance to the ocean,
-            and uncover the mysteries hidden beneath the sea with Bill and the River Corps.
+            Join Bill and the River Corps in an underwater adventure to restore balance
+            to the ocean. Explore polluted waters, complete missions, and help protect
+            marine life from the growing threat of waste.
         </p>
 
         <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
@@ -309,7 +319,7 @@ $screenshots = [
         </a>
 
         <div class="download-note">
-            Free Download • Windows Platform
+            Free to Play • Windows Platform
         </div>
 
     </div>
