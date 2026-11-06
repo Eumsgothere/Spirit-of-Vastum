@@ -12,6 +12,7 @@
         font-family: Arial, sans-serif;
     }
 
+
     .contact-wrapper {
         position: relative;
         width: 100%;

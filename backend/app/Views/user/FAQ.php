@@ -12,6 +12,7 @@
         font-size: 1.1rem;
     }
 
+
     .faq-card {
         background: white;
         border: none;
