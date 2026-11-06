@@ -190,15 +190,37 @@ $screenshots = [
 
         /* DOWNLOAD SECTION */
         .download-section {
-            background: linear-gradient(135deg, #468189, #031926);
-            padding: 60px 40px;
+            background: linear-gradient(135deg, #031926, #468189);
             border-radius: 30px;
+            padding: 60px 40px;
+            margin: 70px auto;
+            text-align: center;
             color: #F4E9CD;
-            box-shadow: 0 10px 30px rgba(3, 25, 38, 0.2);
+            box-shadow: 0 12px 30px rgba(3, 25, 38, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .download-section::before {
+            content: "🌊";
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.08;
+            left: 30px;
+            top: 10px;
+        }
+
+        .download-section::after {
+            content: "🐟";
+            position: absolute;
+            font-size: 7rem;
+            opacity: 0.08;
+            right: 40px;
+            bottom: 10px;
         }
 
         .download-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             margin-bottom: 15px;
             color: #F4E9CD;
@@ -206,36 +228,38 @@ $screenshots = [
 
         .download-text {
             max-width: 700px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 30px;
             font-size: 1.1rem;
             line-height: 1.8;
             color: #dfe9e7;
         }
 
         .download-btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             background: #F4E9CD;
             color: #031926;
             text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 999px;
             font-weight: 700;
-            font-size: 1.15rem;
-            padding: 16px 42px;
-            border-radius: 50px;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
         }
 
         .download-btn:hover {
             background: white;
             color: #468189;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
         }
 
         .download-note {
-            color: #dfe9e7;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.85);
             font-size: 0.95rem;
         }
-
     }
 </style>
 
@@ -267,23 +291,27 @@ $screenshots = [
     </div>
 
     <!-- DOWNLOAD GAME -->
-    <div class="mt-5 text-center download-section">
-        <h2 class="download-title">Download Spirit of Vastum</h2>
+    <div class="download-section">
+
+        <h2 class="download-title">
+            Download Spirit of Vastum
+        </h2>
 
         <p class="download-text">
-            Dive into an exciting underwater adventure and help save the ocean from pollution.
-            Play as Bill and discover the secrets hidden beneath the sea.
+            Dive into an exciting underwater adventure, restore balance to the ocean,
+            and uncover the mysteries hidden beneath the sea with Bill and the River Corps.
         </p>
 
         <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
             class="download-btn"
             download>
-            ⬇ Download Now
+            ⬇ Download for Windows
         </a>
 
-        <p class="mt-3 download-note">
-            Available for Windows
-        </p>
+        <div class="download-note">
+            Free Download • Windows Platform
+        </div>
+
     </div>
     <!-- GAME FEATURES -->
     <div class="mt-5 text-center">
