@@ -188,6 +188,54 @@ $screenshots = [
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
         }
 
+        /* DOWNLOAD SECTION */
+        .download-section {
+            background: linear-gradient(135deg, #468189, #031926);
+            padding: 60px 40px;
+            border-radius: 30px;
+            color: #F4E9CD;
+            box-shadow: 0 10px 30px rgba(3, 25, 38, 0.2);
+        }
+
+        .download-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: #F4E9CD;
+        }
+
+        .download-text {
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #dfe9e7;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #F4E9CD;
+            color: #031926;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.15rem;
+            padding: 16px 42px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background: white;
+            color: #468189;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .download-note {
+            color: #dfe9e7;
+            font-size: 0.95rem;
+        }
+
     }
 </style>
 
@@ -218,7 +266,25 @@ $screenshots = [
         </div>
     </div>
 
+    <!-- DOWNLOAD GAME -->
+    <div class="mt-5 text-center download-section">
+        <h2 class="download-title">Download Spirit of Vastum</h2>
 
+        <p class="download-text">
+            Dive into an exciting underwater adventure and help save the ocean from pollution.
+            Play as Bill and discover the secrets hidden beneath the sea.
+        </p>
+
+        <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
+            class="download-btn"
+            download>
+            ⬇ Download Now
+        </a>
+
+        <p class="mt-3 download-note">
+            Available for Windows
+        </p>
+    </div>
     <!-- GAME FEATURES -->
     <div class="mt-5 text-center">
         <h2 class="section-title">Game Features</h2>
