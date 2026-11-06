@@ -17,7 +17,7 @@
         position: relative;
         width: 100%;
         min-height: 100vh;
-        background: url('Images/spirit_of_vastum_Banner.png') center center / cover no-repeat;
+        background: url('Images/spirit_of_vastum_Banner_website.png') center center / cover no-repeat;
         display: flex;
         justify-content: center;
         align-items: center;
