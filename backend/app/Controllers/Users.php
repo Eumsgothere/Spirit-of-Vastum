@@ -13,7 +13,7 @@ class Users extends BaseController
 
     public function faq()
     {
-        return view('user/faq');
+        return view('user/FAQ');
     }
 
     public function devlog()
@@ -23,7 +23,7 @@ class Users extends BaseController
 
     public function contactus()
     {
-        return view('user/contactus');
+        return view('user/ContactUs');
     }
 
     public function about()
