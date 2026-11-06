@@ -213,31 +213,6 @@ $screenshots = [
             background: white;
             transform: translateY(-3px);
         }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 16px 40px;
-            background: #F4E9CD;
-            color: #031926;
-            text-decoration: none;
-            border-radius: 14px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background: white;
-            color: #031926;
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-        }
-
-        <div class="download-box"><h2 class="about-title">Download Spirit of Vastum </h2><p class="mx-auto about-description">Dive into an unforgettable underwater adventure and help save the ocean. </p><a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
-        class="download-btn"
-        download>⬇ Download Now </a></div>
     }
 </style>
 
@@ -277,21 +252,22 @@ $screenshots = [
 
         <p class="mx-auto about-description">
             Experience the adventure firsthand and join Bill on his mission to protect
-            the ocean from pollution.
+            the ocean from pollution. Explore underwater environments, complete missions,
+            and discover the mysteries hidden beneath the sea while learning the importance
+            of environmental responsibility.
         </p>
 
-        <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
-            class="download-btn"
-            download>
-            🎮 Download for Windows
-        </a>
+        <div class="d-flex justify-content-center gap-3 mt-4">
 
-        <p style="margin-top:15px;color:#dfe9e7;font-size:0.9rem;">
-            Version 1.0 • Windows 64-bit
-        </p>
+            <a href="<?= base_url('downloads/SpiritOfVastum.zip'); ?>"
+                class="custom-btn"
+                download>
+                ⬇ Download Game
+            </a>
+
+        </div>
 
     </div>
-
     <!-- GAME FEATURES -->
     <div class="mt-5 text-center">
         <h2 class="section-title">Game Features</h2>
