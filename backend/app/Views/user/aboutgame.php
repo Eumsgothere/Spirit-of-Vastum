@@ -197,38 +197,21 @@ $screenshots = [
             text-align: center;
         }
 
-        .download-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #F4E9CD;
-            letter-spacing: 1px;
-        }
-
-        .download-description {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 2;
-            color: #dfe9e7;
-        }
-
         .download-btn {
             display: inline-block;
-            margin-top: 30px;
-            padding: 14px 32px;
-            border-radius: 12px;
+            margin-top: 25px;
+            padding: 14px 30px;
             background: #F4E9CD;
-            color: teal;
+            color: #031926;
             text-decoration: none;
+            border-radius: 12px;
             font-weight: 700;
             transition: all 0.3s ease;
         }
 
         .download-btn:hover {
-            background: #fff;
-            color: #004d4d;
-            transform: translateY(-2px);
+            background: white;
+            transform: translateY(-3px);
         }
     }
 </style>
@@ -261,14 +244,13 @@ $screenshots = [
     </div>
 
     <!-- DOWNLOAD SECTION -->
-    <!-- DOWNLOAD SECTION -->
-    <div class="mb-5 download-box">
+    <div class="mb-5 text-center about-hero">
 
-        <h2 class="download-title">
+        <h2 class="about-title">
             Download Spirit of Vastum
         </h2>
 
-        <p class="download-description">
+        <p class="mx-auto about-description">
             Experience the adventure firsthand and join Bill on his mission to protect
             the ocean from pollution. Explore underwater environments, complete missions,
             and discover the mysteries hidden beneath the sea while learning the importance
