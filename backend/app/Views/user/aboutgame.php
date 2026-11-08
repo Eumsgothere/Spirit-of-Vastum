@@ -258,10 +258,10 @@ $screenshots = [
         </p>
 
         <div class="d-flex justify-content-center mt-4">
-            <a href="https://drive.google.com/file/d/19GcLdIfN7AvRYo3P2ytnRW1QRGNNd51O/view?usp=sharing>
-                class=" custom-btn"
-                download>
-                🎮 Download Spirit of Vastum
+            <a href="https://drive.google.com/file/d/19GcLdIfN7AvRYo3P2ytnRW1QRGNNd51O/view?usp=sharing"
+                class="custom-btn"
+                target="_blank">
+                🎮 Download Game
             </a>
         </div>
 
