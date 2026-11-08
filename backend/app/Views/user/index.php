@@ -242,8 +242,8 @@ $screenshots = [
                     📋 Update Logs
                 </a>
 
-                <a href="<?= base_url('downloads/TICAPBUILD.zip'); ?>"
-                    class="custom-btn"
+                <a href="https://drive.google.com/file/d/19GcLdIfN7AvRYo3P2ytnRW1QRGNNd51O/view?usp=sharing>
+                    class=" custom-btn"
                     download>
                     🎮 Download Game
                 </a>
