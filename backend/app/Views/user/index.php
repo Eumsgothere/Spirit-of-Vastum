@@ -242,7 +242,7 @@ $screenshots = [
                     📋 Update Logs
                 </a>
 
-                <a href="<?= base_url('downloads/testbuild1.zip'); ?>"
+                <a href="<?= base_url('downloads/TICAPBUILD.zip'); ?>"
                     class="custom-btn"
                     download>
                     🎮 Download Game
