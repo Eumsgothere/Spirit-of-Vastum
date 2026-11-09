@@ -242,7 +242,7 @@ $screenshots = [
                     📋 Update Logs
                 </a>
 
-                <a href="https://drive.google.com/file/d/19GcLdIfN7AvRYo3P2ytnRW1QRGNNd51O/view?usp=sharing"
+                <a href="https://drive.google.com/drive/folders/1isJVOOBul0Wd88YjXWH27udLGBGzpUtr?usp=sharing"
                     class="custom-btn"
                     target="_blank">
                     🎮 Download Game
